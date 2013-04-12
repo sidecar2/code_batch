@@ -11,3 +11,21 @@
  *= require_self
  *= require_tree .
  */
+
+ ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #999;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #999;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #999;
+}
+
+figure#sample {background: url(/assets/macbook.png) no-repeat; height: 300px; padding: 40px 50px 40px 50px; float:left; width: 540px; margin: 10px;}
+
+article.sample_post:after  {  content: url("/assets/home_arrow.png"); height: 13px; position: absolute; right: 10px; top: 16px; width: 10px;}
+

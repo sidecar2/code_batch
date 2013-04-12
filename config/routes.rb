@@ -1,4 +1,21 @@
 CodeBatch::Application.routes.draw do
+
+
+devise_for :users, :path_prefix => '!'
+
+resources :users
+resources :posts
+
+match '/home', to: 'user#show'
+ match '/help', to: 'static_pages#help'
+ match '/about', to: 'static_pages#about'
+match '/sign_up', to: 'devise/registrations#new'
+
+root :to => "static_pages#index"
+
+#root :to => 'users#show[params:id]' 
+#@user = current_user // should probably involved somewhere...the model??
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

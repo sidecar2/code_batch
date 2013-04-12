@@ -1,0 +1,55 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <section class="post_attributes">
+      <div class="content_wrap">
+  <div class="post_label">
+    <%= f.label :description, "Describe Batch" %>
+  </div>
+  
+  <div class="post_entry">
+    <%= f.text_area :description, :placeholder => "Briefly describe Code Batch " %>
+  </div>
+  
+ <%#   <div class="post_label"> 
+    <%= f.label :tag_list, "Ingredients" %> 
+  <%#   
+  <div class="post_entry">
+      <%= f.text_field :tag_list, :placeholder => "Separate code types by commas" %>
+  <%# </div> %>
+
+   <div class="post_label">
+    <%= f.label :notes %>
+  </div>
+  <div class="post_entry">
+    <%= f.text_area :notes %>
+  </div>
+</div>
+</section>
+<section class="snippet_wrap">
+    <div class="content_wrap">
+      <div class="snippet">
+ <div class="post_label">
+    <%= f.label :content, "Code" %></div>
+    <div class="post_entry">
+    <%= f.text_area :content %>
+  </div>
+</div>
+  <h5 id="clone"> Add Another Snippet </h5>
+    <div class="content_wrap">
+</section>
+ 
+ <%= f.hidden_field :user_id %>
+  <div class="actions">
+    <%= f.submit "Post Batch" %>
+  </div>
+<% end %>

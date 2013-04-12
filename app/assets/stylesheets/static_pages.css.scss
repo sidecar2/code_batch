@@ -1,0 +1,69 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$lightgray: #939598;
+$darkgray: #414042;
+$mediumgray: #6D6E71;
+$greenbutton: #90D1C0;
+$buttonpadding: 10px 30px;
+$hoverorange: #F89C57; 
+$brandon: "brandon-grotesque",sans-serif;
+$code: "ubuntu-mono",sans-serif;
+
+body {background: $darkgray; font-family: $brandon;}
+
+p {font-family: $brandon;}
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+//HEADER
+header.top {color: $lightgray;}
+h1.title {color: $mediumgray; font-size: 3.6em; text-align: center; font-weight: 600; line-height: 1.8em; letter-spacing: 1px;}
+h2.description {color: #ffffff; text-align: center; letter-spacing: 2px; font-size: 2.5em; margin: 1em 0;
+}
+
+p.helper {color: $mediumgray; text-transform: uppercase; font-family: $brandon; text-align: center; font-size: 1.5em; margin-top: 3em; font-weight: 600; letter-spacing: 1px;}
+p.helper.border {border-top: 1px solid #6D6E71; padding-top: 2em;  font-size: 1.3em; margin-bottom: 2em;}
+p.helper.border.half {width: 50%; margin: auto;}
+#summary {width: 100%; background: #EAEFF2; width: 100%; padding-top: 20px;}
+//HOMEPAGE CONTENT SWAPPER
+h3.home_explain {margin-bottom: 1em; font-size: 1.3em; margin-top: 3.7em; color: $darkgray; text-transform: capitalize;}
+aside#sample_text {float: left; width: 35%; height: 300px;}
+aside#sample_text p {font-size: 1em; color: $mediumgray; font-weight: 600; font-family: $code;}
+.column_sample {float: left; 
+h6 { color: $greenbutton; }
+ }
+.column_sample.left { width: 130px; margin-left: 50px; }
+.column_sample.left p { font-size: 0.9em; line-height: 1.1em; font-family: $brandon; }
+
+.column_sample.right {width: 260px; margin-left: 10px;}
+.column_sample.right h5 {text-transform: uppercase; color: #999999; font-size: 1.6em; border-bottom: 1px solid #ddd; margin-bottom: 1em; margin-top: 1em; padding-bottom: 4px;}
+article.sample_post {margin: 10px auto 10px auto; background: $lightgray; border-radius: 4px; position: relative;}
+article.sample_post p {font-family: $code; padding: 6px; font-size: .9em; line-height: 1.4em; width: 230px; }
+nav.slide_thumbs {height: 15px; position: absolute; bottom: -80px; left: 365px;
+ul { list-style: none; 
+	li { display: inline-block; width: 15px; height: 15px; margin: 0 5px;
+		} 
+	}
+}
+nav.slide_thumbs ul li a {display: inline-block; width: 15px; height: 15px; background: $mediumgray; border-radius: 15px; }
+nav.slide_thumbs ul li a.active {background: $greenbutton;}
+section.slide {position: absolute;}
+
+h2.title {text-align: center; text-transform: uppercase; color: $mediumgray; font-size: 2em; color: #fff; letter-spacing: 1px;}
+//Sign Up Form
+form#new_user {width: 480px; margin: 2em auto;}
+form#new_user input, form#new_user textarea, form#new_user select, .uneditable-input {width: 480px; background: $mediumgray; border: none;}
+form#new_user input[type="submit"] { text-align: center; margin: 2em auto; width: 160px; display: block; padding: 6px 60px; background: $greenbutton; font-size: 1.4em; text-transform: uppercase; font-family: $brandon; color: $darkgray; border-radius: none; font-weight: 600;}
+form#new_user input:focus,  {box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(255, 255, 255, 0.3); background: $lightgray;}
+form#new_user label {font-family: $brandon; color: $mediumgray; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;}
+
+// 
+
+
+section.about { width: 540px; margin: 0 auto; background: $mediumgray; border-radius: 4px; padding: 10px;}

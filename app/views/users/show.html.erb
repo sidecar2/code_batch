@@ -1,0 +1,46 @@
+<div class="content_wrap show_page">
+
+<section id="left_column">	
+<h3 class="user_name"><%= @user.username %> </h1>
+
+	<% if @user.bio %> 
+
+	<% end %>
+	
+		<% if @user.bio %> 
+		<p class="user_label">
+			Bio
+		</p>
+		<div class="profile_field">
+		<%= @user.bio %>
+		</div>
+		<% end %>
+	
+		<% if @user.site %> 
+		<p class="user_label">
+			Site
+		</p>
+			<div class="profile_field">
+		<%= @user.site %>
+			</div>
+		<% end %>
+
+	<p class="join">
+		<%= link_to 'Edit Profile', edit_user_registration_path if user_signed_in? %>
+	</p>
+</section>
+<section id="right_column">
+<h3 class="user_name right"> Code Batches </h3>
+<section class="batches">
+<% @posts.each do |post| %>
+ <article class="batch">
+    <td><%= post.content %></td>
+    <td><%= post.tags %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) if user_signed_in? %></td>
+    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ </article>
+<% end %>
+</section>
+
+</div>

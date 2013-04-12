@@ -1,0 +1,38 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$label_grey: #939598;
+$form_white: #ffffff;
+$dark_grey: #414042;
+$brandon: "brandon-grotesque",sans-serif;
+$code: "ubuntu-mono",sans-serif;
+$lightblue: #E5E8E9;
+
+//HEADER STYLES
+
+header.posts {background: #fff; height: 45px;}
+header.posts .content_wrap {position: relative;}
+.search {float: left; width: 300px; height: 25px; padding-top: 15px;}
+
+nav#post_nav { float: left; height: 25px; padding-top: 15px; 
+ul { list-style: none; margin: 0;
+	li#new, li#list, li#home {display: inline; padding-right: 15px; color: #A7A9AC; font-weight: 600; text-transform: uppercase;
+	a {color: #A7A9AC; 		
+		}
+	}
+ }
+}
+.post_entry {width: 600px; margin: 0 auto;}
+.post_label {width: 600px; margin: 0 auto;}
+
+.post_label label {font-size: 1.2em; color: $label_grey; font-family: $brandon; text-transform: uppercase; padding: 10px 0; font-weight: 600; }
+
+.post_entry textarea, .post_entry input {width: 600px; background: $form_white; border:none;}
+ .post_entry textarea#post_description {height: 60px;}
+.post_entry textarea#post_notes {height: 70px;}
+.post_entry textarea#post_content {background: #2F3338;}
+section.post_attributes {background: $lightblue; padding-top: 45px; padding-bottom: 30px;}
+
+section.snippet_wrap {background: $dark_grey;}
+
+

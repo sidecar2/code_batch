@@ -1,0 +1,21 @@
+<%=render :partial => 'log_in' %>
+
+<p>
+<h3 class="post"> Batch Description<h3>
+ <div class="post_content">
+  <%= @post.description %>
+</div>
+<h3 class="post"> Ingredients </h3>
+ <%# <div class="post_content">
+  <%= @post.tag_list %>
+</div>
+<h3 class="post">Notes</h3>
+<p>
+  <b>Content:</b>
+
+</p>
+
+<% if user_signed_in? %>
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+<% end %>

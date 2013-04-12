@@ -1,0 +1,55 @@
+@import "bootstrap";
+
+$darkgray: #414042;
+$greyborder: solid 1px #58595B;
+$mediumgray: #808285;
+$greenbutton: #90D1C0;
+$buttonpadding: 10px 30px;
+$hoverorange: #F89C57; 
+$brandon: "brandon-grotesque",sans-serif;
+$fieldblue: #919BA6;
+
+
+html, body {height: 100%;}
+h1.title {text-align: center; padding-top: 10px; padding-bottom: 10px; font-size: 1.8em;}
+
+h2.page_title {text-align: center; font-size: 1.4em;}
+
+nav#main { width: 100%; border-bottom: 1px solid #ddd; 
+	ul {list-style: none;
+		 li {display: inline; padding: 10px;
+			a {color: #000;
+			}
+		}
+	}
+}
+
+	
+body {font-family: "brandon-grotesque",sans-serif;}
+.container {width: 100%;}
+.content_wrap {width: 1040px; margin: 0 auto;}
+.content_wrap.show_page {height: 93%;}
+.alert {background: none; border: none;}
+.status {color: #999999; position: absolute; top: 15px; right: 10px; font-size: .9em; text-transform: uppercase;}
+.status a {color: #000;}
+
+//green_button
+p.join {text-align: center; margin-top: 6em; margin-bottom: 6em;
+ a {background: $greenbutton; color: $darkgray; padding: $buttonpadding; font-family: $brandon; font-size: 1.4em; letter-spacing: 1px; font-weight: 600; text-transform: uppercase;
+ &:hover { background: $hoverorange; color: #fff; text-decoration: none; }
+ }
+}
+section#left_column p.join {text-align: left;}
+//Page Split - User Pages
+
+h3.user_name {color: $mediumgray; font-size: 2.1em; padding: 20px 0 20px 0; text-transform: uppercase; letter-spacing: 1px; border-bottom: $greyborder;}
+h3.user_name.right {padding-left: 50px;}
+section#left_column {width: 300px; float: left; border-right: $greyborder; height: 100%;}
+section#right_column {width: 739px; float: left;}
+p.user_label {color: $fieldblue; font-size: 1em; padding: 2px 0 2px 0; text-transform: uppercase; font-weight: 600;}
+.profile_field {width: 85%; margin: 10px 0; background: $mediumgray; padding: 5px;}
+
+
+// Articles
+section.batches {padding-left: 50px; }
+article.batch {width: 85%; margin: 20px 0;; padding: 10px; background: #58595B;}

@@ -9,24 +9,15 @@
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-	<header class="top">
-	<h1 class="title"><img src="/assets/logo.png"> <b>CODE-BATCH</b> </h1>
-</header>
-
-<% if notice %>
-    <p class="notice"><%= notice %></p>
-<% end %>
-
-<% if alert %>
-    <p class="alert"><%= notice %></p>
-<% end %>
-       <div class="status"><% if user_signed_in? %>
-       Signed in as <%= current_user.username %> | 
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+       <% if user_signed_in? %>
+       Signed in as <%= current_user.username %> Not you?
        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
        <% else %> 
        <%= link_to "Join", new_user_registration_path %> or <%= link_to "Sign In", new_user_session_path %> 
        <% end %>
-   </div>
+       <h1> CODE BATCH </h1>
 <%= yield %>
 </body>
 </html>
