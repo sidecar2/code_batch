@@ -3,10 +3,31 @@
 <section id="left_column">	
 <h3 class="user_name"><%= @user.username %> </h1>
 
-	<% if @user.bio %> 
+	<figure class="profile">
+		<%if @user.avatar %>
+		<%= image_tag(@user.avatar.url) %>
+		<%else%>
+		<%= No Profile Image %>
+		<%end%>
+	</figure>
+	<div class="post_count">
+		<p class="top_label"> Total Batches </p>
+		<p class="top_number"> { <%= @user.posts.count %> } </p>
+		<p class="top_label"> Join Date </p>
+		<p class="top_number"> <%= @user.created_at.strftime("%d %b. %Y") %></p>
 
-	<% end %>
-	
+	</div>
+<div style="clear:both"></div>
+
+<% if @user.location %> 
+		<p class="user_label">
+			Location
+		</p>
+			<div class="profile_field">
+		<%= @user.location %>
+			</div>
+		<% end %>
+
 		<% if @user.bio %> 
 		<p class="user_label">
 			Bio
@@ -25,17 +46,20 @@
 			</div>
 		<% end %>
 
-	<p class="join">
-		<%= link_to 'Edit Profile', edit_user_registration_path if user_signed_in? %>
+	<p class="edit">
+		<%= link_to image_tag('/assets/edit_profile.png') +'Edit Profile', edit_user_registration_path if user_signed_in? %>
 	</p>
 </section>
 <section id="right_column">
 <h3 class="user_name right"> Code Batches </h3>
+	<p class="join batch_link">
+		<%= link_to '+ New Batch', new_post_path if user_signed_in? %>
+	</p>
 <section class="batches">
 <% @posts.each do |post| %>
  <article class="batch">
     <td><%= post.content %></td>
-    <td><%= post.tags %></td>
+    <td><%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(',') %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) if user_signed_in? %></td>
     <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

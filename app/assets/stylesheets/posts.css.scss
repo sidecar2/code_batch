@@ -7,7 +7,7 @@ $dark_grey: #414042;
 $brandon: "brandon-grotesque",sans-serif;
 $code: "ubuntu-mono",sans-serif;
 $lightblue: #E5E8E9;
-
+$fieldblue: #919BA6;
 //HEADER STYLES
 
 header.posts {background: #fff; height: 45px;}
@@ -16,8 +16,8 @@ header.posts .content_wrap {position: relative;}
 
 nav#post_nav { float: left; height: 25px; padding-top: 15px; 
 ul { list-style: none; margin: 0;
-	li#new, li#list, li#home {display: inline; padding-right: 15px; color: #A7A9AC; font-weight: 600; text-transform: uppercase;
-	a {color: #A7A9AC; 		
+	li#new, li#list, li#home {display: inline; padding-right: 15px; color: #A7A9AC; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+	a {color: $fieldblue; 		
 		}
 	}
  }

@@ -34,6 +34,9 @@ GEM
     bcrypt-ruby (3.0.1)
     bootstrap-sass (2.0.0)
     builder (3.0.4)
+    carrierwave (0.8.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -90,6 +93,7 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
+    rmagick (2.13.2)
     sass (3.2.7)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -120,11 +124,13 @@ DEPENDENCIES
   acts-as-taggable-on (~> 2.3.1)
   bcrypt-ruby (= 3.0.1)
   bootstrap-sass (= 2.0.0)
+  carrierwave (~> 0.8.0)
   coffee-rails (~> 3.2.1)
   devise (~> 2.2.3)
   jquery-rails
   pg
   rails (= 3.2.13)
+  rmagick (= 2.13.2)
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)

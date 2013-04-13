@@ -1,5 +1,6 @@
 @import "bootstrap";
 
+$lightgray: #939598;
 $darkgray: #414042;
 $greyborder: solid 1px #58595B;
 $mediumgray: #808285;
@@ -8,13 +9,13 @@ $buttonpadding: 10px 30px;
 $hoverorange: #F89C57; 
 $brandon: "brandon-grotesque",sans-serif;
 $fieldblue: #919BA6;
-
+$code: "ubuntu-mono",sans-serif;
 
 html, body {height: 100%;}
 h1.title {text-align: center; padding-top: 10px; padding-bottom: 10px; font-size: 1.8em;}
 
 h2.page_title {text-align: center; font-size: 1.4em;}
-
+h2.main {color: $mediumgray; font-size: 1.4em; width: 480px; margin: 15px auto; text-transform: uppercase; letter-spacing: 1px;}
 nav#main { width: 100%; border-bottom: 1px solid #ddd; 
 	ul {list-style: none;
 		 li {display: inline; padding: 10px;
@@ -39,17 +40,38 @@ p.join {text-align: center; margin-top: 6em; margin-bottom: 6em;
  &:hover { background: $hoverorange; color: #fff; text-decoration: none; }
  }
 }
+
+p.join.batch_link {text-align: left; padding-left: 50px; margin-top: 3.5em;}
 section#left_column p.join {text-align: left;}
+p.edit {text-transform: uppercase; letter-spacing: 1px; padding-top: 10px; font-weight: 600;
+a {color: $mediumgray; }
+}
+
+p.notice {position: absolute; top: 48px; text-align: right; right: 10px; color: $lightgray;}
 //Page Split - User Pages
 
 h3.user_name {color: $mediumgray; font-size: 2.1em; padding: 20px 0 20px 0; text-transform: uppercase; letter-spacing: 1px; border-bottom: $greyborder;}
 h3.user_name.right {padding-left: 50px;}
 section#left_column {width: 300px; float: left; border-right: $greyborder; height: 100%;}
 section#right_column {width: 739px; float: left;}
-p.user_label {color: $fieldblue; font-size: 1em; padding: 2px 0 2px 0; text-transform: uppercase; font-weight: 600;}
+p.user_label {color: $mediumgray; font-size: 1em; padding: 2px 0 2px 0; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;}
+p.top_label { color: $mediumgray; font-size: 1em; letter-spacing: 1px; font-weight: 600; padding-bottom: 0; margin-bottom: 2px; text-transform: uppercase;}
+p.top_number { font-family: $code; font-size: 1em; color: $fieldblue;}
 .profile_field {width: 85%; margin: 10px 0; background: $mediumgray; padding: 5px;}
-
-
+figure.profile {padding: 0; margin: 30px 0; width: 120px; float: left; margin-right: 20px; }
+figure.profile img {width: 120px; height: 120px; }
+.post_count {width: 130px; float: left; margin-top: 30px; }
 // Articles
 section.batches {padding-left: 50px; }
 article.batch {width: 85%; margin: 20px 0;; padding: 10px; background: #58595B;}
+
+//Devise Links
+.status a, .status, .links a  { color: $fieldblue; letter-spacing: 1px; font-weight: 600; text-transform: uppercase;}
+
+//Sign Up Forms
+form#new_user, form#edit_user {width: 480px; margin: 2em auto;}
+form#new_user input, form#new_user textarea, form#new_user select, .uneditable-input, form#edit_user input, form#edit_user textarea, form#edit_user select   {width: 480px; background: $mediumgray; border: none; color: $darkgray; font-weight: 600;}
+form#new_user input[type="submit"], form#edit_user input[type="submit"] { text-align: center; margin: 2em auto; width: 160px; display: block; padding: 6px 60px; background: $greenbutton; font-size: 1.4em; text-transform: uppercase; font-family: $brandon; color: $darkgray; border-radius: none; font-weight: 600;}
+form#new_user input:focus, form#edit_user input:focus {box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(255, 255, 255, 0.3); background: $lightgray;}
+form#new_user label, form#edit_user label {font-family: $brandon; color: $mediumgray; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;}
+form#new_user input#user_avatar, form#edit_user input#user_avatar  {background: #fff;}

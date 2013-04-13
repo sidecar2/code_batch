@@ -57,12 +57,9 @@ section.slide {position: absolute;}
 
 h2.title {text-align: center; text-transform: uppercase; color: $mediumgray; font-size: 2em; color: #fff; letter-spacing: 1px;}
 //Sign Up Form
-form#new_user {width: 480px; margin: 2em auto;}
-form#new_user input, form#new_user textarea, form#new_user select, .uneditable-input {width: 480px; background: $mediumgray; border: none;}
-form#new_user input[type="submit"] { text-align: center; margin: 2em auto; width: 160px; display: block; padding: 6px 60px; background: $greenbutton; font-size: 1.4em; text-transform: uppercase; font-family: $brandon; color: $darkgray; border-radius: none; font-weight: 600;}
-form#new_user input:focus,  {box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(255, 255, 255, 0.3); background: $lightgray;}
-form#new_user label {font-family: $brandon; color: $mediumgray; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;}
 
+
+edit_user
 // 
 
 

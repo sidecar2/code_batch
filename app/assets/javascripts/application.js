@@ -50,3 +50,7 @@ $("h5#clone").click(function(){
 });
 
 
+
+setTimeout(function() {
+    $('p.notice').fadeOut('slow');
+}, 2000); // <

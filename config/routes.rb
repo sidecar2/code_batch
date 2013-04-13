@@ -13,6 +13,8 @@ match '/sign_up', to: 'devise/registrations#new'
 
 root :to => "static_pages#index"
 
+get 'tags/:tag', to: 'posts#index', as: :tag 
+
 #root :to => 'users#show[params:id]' 
 #@user = current_user // should probably involved somewhere...the model??
 

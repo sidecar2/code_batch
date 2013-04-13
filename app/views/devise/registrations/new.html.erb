@@ -1,6 +1,7 @@
-<h2>Sign up</h2>
+<div class="content_wrap">
+	<h2 class="main">Sign up</h2>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:multipart => true}) do |f| %>
   <%= devise_error_messages! %>
 
 
@@ -8,21 +9,33 @@
   <%= f.text_field :username, :autofocus => true %>
 
    <div class="sign_up_label"><%= f.label :email %></div>
-  <%= f.email_field :email %></div>
+  <%= f.email_field :email %>
+
+  <div class="sign_up_label"><%= f.label :location, "Location" %></div>
+ <%= f.text_field :location %>
 
  <div class="sign_up_label"><%= f.label :bio, "Short Bio (Totally Optional)" %></div>
-  <%= f.text_field :bio %></div>
+  <%= f.text_field :bio %>
 
   <div class="sign_up_label"><%= f.label :site, "Site (Also Optional)" %></div>
- <%= f.text_field :site %></div>
+ <%= f.text_field :site %>
 
 <div class="sign_up_label"><%= f.label :password %></div>
-  <%= f.password_field :password %></div>
+  <%= f.password_field :password %>
 
  <div class="sign_up_label"><%= f.label :password_confirmation %></div>
-  <%= f.password_field :password_confirmation %></div>
+  <%= f.password_field :password_confirmation %>
+<div class="sign_up_label">  </div>
+<div class="upload_fixer">
+	<div class="file_input">
+		<img src="/assets/add_image.png" /> <b> Upload Profile Pic </b>
+	</div>
+<%= f.file_field :avatar %>
+<%= f.hidden_field :avatar_cache %>
 
+</div>
   <div><%= f.submit "Join" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
