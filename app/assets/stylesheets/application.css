@@ -36,7 +36,6 @@ form#new_user input[type="file"], form#edit_user input[type="file"]  {
 position: relative;
 	text-align: left;
 	-moz-opacity:0 ;
-	filter:alpha(opacity: 0);
 	opacity: 0;
 	z-index: 2;
 	width: 200px;
