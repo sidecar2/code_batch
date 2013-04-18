@@ -1,7 +1,7 @@
 <div class="content_wrap show_page">
 
 <section id="left_column">	
-<h3 class="user_name"><%= @user.username %> </h1>
+<h3 class="user_name"><%= @user.username %> </h3>
 
 	<figure class="profile">
 		<%if @user.avatar %>
@@ -53,7 +53,7 @@
 <section id="right_column">
 <h3 class="user_name right"> Code Batches </h3>
 	<p class="join batch_link">
-		<%= link_to '+ New Batch', new_post_path if user_signed_in? %>
+		<%= link_to '+ New Batch', new_post_path if user_signed_in? && current_user %>
 	</p>
 <section class="batches">
 <% @posts.each do |post| %>
@@ -61,7 +61,7 @@
     <td><%= post.content %></td>
     <td><%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(',') %></td>
     <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) if user_signed_in? %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) if user_signed_in? && current_user %></td>
     <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
  </article>
 <% end %>

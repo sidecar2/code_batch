@@ -10,4 +10,8 @@ class UsersController < ApplicationController
       format.json { render json: @posts }
   end
 end
+
+  def profile
+    @user = current_user
+  end
 end

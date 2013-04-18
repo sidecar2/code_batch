@@ -1,4 +1,4 @@
-<%=render :partial => 'log_in' %>
+<div class="content_wrap show_page">
 
 <p>
 <h3 class="post"> Batch Description<h3>
@@ -9,6 +9,20 @@
   <div class="post_content">
   <%= @post.tag_list %>
 </div>
+<div class="post_content">
+<textarea ace-editor="" ace-theme="solarized_light" ace-mode="javascript">
+  <%= @post.content %>
+</textarea>
+
+</div>
+
+<div class="post_content">
+	<pre class="prettyprint">
+		<textarea ace-editor="" ace-theme="solarized_light" ace-mode="javascript">
+  <%= @post.css %>
+  </textarea>
+</pre>
+</div>
 <h3 class="post">Notes</h3>
 <p>
   <b>Content:</b>
@@ -16,6 +30,6 @@
 </p>
 
 <% if user_signed_in? %>
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+
 <% end %>
+</div>

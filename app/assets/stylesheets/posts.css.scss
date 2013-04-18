@@ -8,11 +8,16 @@ $brandon: "brandon-grotesque",sans-serif;
 $code: "ubuntu-mono",sans-serif;
 $lightblue: #E5E8E9;
 $fieldblue: #919BA6;
+$mediumgray: #808285;
+$background: #58595B;
+$lightgray: #939598;
+
 //HEADER STYLES
 
+body.posts {background: #EAEFF2;}
 header.posts {background: #fff; height: 45px;}
 header.posts .content_wrap {position: relative;}
-.search {float: left; width: 300px; height: 25px; padding-top: 15px;}
+.search {float: left; width: 300px; height: 25px; padding-top: 15px; text-transform: uppercase; color: $fieldblue; font-weight: 600; letter-spacing: 1px;}
 
 nav#post_nav { float: left; height: 25px; padding-top: 15px; 
 ul { list-style: none; margin: 0;
@@ -22,17 +27,60 @@ ul { list-style: none; margin: 0;
 	}
  }
 }
-.post_entry {width: 600px; margin: 0 auto;}
-.post_label {width: 600px; margin: 0 auto;}
+.post_entry { margin: 0 auto;  }
+.post_label { margin: 0 auto;}
 
-.post_label label {font-size: 1.2em; color: $label_grey; font-family: $brandon; text-transform: uppercase; padding: 10px 0; font-weight: 600; }
+.post_label label {font-size: 1.2em; color: $label_grey; font-family: $brandon; text-transform: uppercase; padding: 10px 0; font-weight: 600; letter-spacing: 1px;}
 
-.post_entry textarea, .post_entry input {width: 600px; background: $form_white; border:none;}
- .post_entry textarea#post_description {height: 60px;}
-.post_entry textarea#post_notes {height: 70px;}
-.post_entry textarea#post_content {background: #2F3338;}
+//POST FORM
+.post_entry textarea, .post_entry input {width: 270px; background: $background; border:none; color: $lightblue;}
+
+input#post_codetype {height: 20px; margin-left: 35px; width: 150px; background: none; width: 150px; margin-bottom: 0; border: 0; border-radius: 0px 0px; box-shadow: none; border-bottom: solid 1px $mediumgray;}
+
+.post_entry.code textarea {width: 300px; display: block; margin: 0px auto; background: #656666; float: left;}
+
 section.post_attributes {background: $lightblue; padding-top: 45px; padding-bottom: 30px;}
+form#new_post input:focus, form#new_post textarea:focus {box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(255, 255, 255, 0.3); background: $lightgray;}
 
-section.snippet_wrap {background: $dark_grey;}
+section.snippet_wrap { margin-top: 30px;}
 
+.snippet_form {width: 739px; margin: 20px 0;}
 
+h5.code_area {font-size: 1.2em; text-transform: uppercase; letter-spacing: 1px; color: $mediumgray; margin: 15px 0;}
+section.batches.form {margin-top: 0;}
+
+//pretty print styles
+
+.post_entry.code {margin-top: 60px; width: 350px; float: left; height: 300px;}
+p.post_heading {background: #F4F4F8; text-transform: uppercase; width: 300px; padding: 4px 0; margin-bottom: 0; text-indent: 5px; border: 1px solid #E6E7E8; }
+.clear {clear:both;}
+.post_entry.code .ace_editor 
+
+selection,.toggle
+{
+    width: 700px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: auto;
+    marign-lift: auto;
+    padding: 5px;
+    background: white;
+    border: solid 2px gray;
+}
+.toggle
+{
+    text-align: center;
+}
+.selection
+{
+    display: none;
+    text-align: left;
+    height: 400px;
+    position: relative;
+}
+.selection .ace_editor {
+	position: absolute;
+	height: 300px; 
+	display: block;
+	min-height: 300px;
+}

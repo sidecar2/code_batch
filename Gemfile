@@ -35,7 +35,7 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem "carrierwave", "~> 0.8.0"
 gem 'rmagick', '2.13.2'
-
+gem 'aced_rails'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

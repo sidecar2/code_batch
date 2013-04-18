@@ -3,9 +3,11 @@ CodeBatch::Application.routes.draw do
 
 devise_for :users, :path_prefix => '!'
 
-resources :users
+resources :users 
 resources :posts
 
+match '/users/:id', :to => 'users#show', :as => :user
+#match ":username" => 'users#show', :as => :username
 match '/home', to: 'user#show'
  match '/help', to: 'static_pages#help'
  match '/about', to: 'static_pages#about'

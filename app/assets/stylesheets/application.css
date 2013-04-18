@@ -10,19 +10,20 @@
  *
  *= require_self
  *= require_tree .
+
  */
 
  ::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #999;
+    color:    #414042;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #999;
+    color:    #414042;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #999;
+    color:    #414042;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    #999;
+    color:    #414042;
 }
 
 figure#sample {background: url(/assets/macbook.png) no-repeat; height: 300px; padding: 40px 50px 40px 50px; float:left; width: 540px; margin: 10px;}

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130413075118) do
+ActiveRecord::Schema.define(:version => 20130417215042) do
 
   create_table "posts", :force => true do |t|
     t.text     "content"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(:version => 20130413075118) do
     t.integer  "user_id"
     t.string   "description"
     t.string   "notes"
+    t.string   "codetype"
+    t.string   "css"
+    t.string   "html"
+    t.string   "haml"
+    t.string   "scss"
+    t.string   "javascript"
+    t.string   "coffee"
+    t.string   "php"
+    t.string   "ruby"
   end
 
   create_table "taggings", :force => true do |t|

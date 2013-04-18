@@ -3,12 +3,21 @@ class PostsController < ApplicationController
   layout "posts_layout"
 
 def index
+
+  @tags = ActsAsTaggableOn::Tag.all(:order=>'name')
+  @tag_count = ActsAsTaggableOn::Tag.count(:id)
+ 
+   if params[:tag] 
+
+    @posts = Post.tagged_with(params[:tag])
+  else 
     @posts = current_user.posts.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
     end
+  end
   end
 
   def new
@@ -49,5 +58,15 @@ def index
 
   def destroy
   end
+
+
+   def tag_cloud
+    @tags = Post.tag_counts_on
+  end
+
+  def self.tag_counts
+  Tag.select("tags.*, count(taggings.tag_id) as count").
+    joins(:taggings).group("taggings.tag_id")
+end
 
 end

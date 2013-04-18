@@ -1,5 +1,8 @@
 @import "bootstrap";
 
+
+$background: #58595B;
+$snippetcolor: #CCCCCC;
 $lightgray: #939598;
 $darkgray: #414042;
 $greyborder: solid 1px #58595B;
@@ -41,7 +44,7 @@ p.join {text-align: center; margin-top: 6em; margin-bottom: 6em;
  }
 }
 
-p.join.batch_link {text-align: left; padding-left: 50px; margin-top: 3.5em;}
+p.join.batch_link {text-align: left; padding-left: 50px; margin-top: 3.5em; margin-bottom: 3.5em;}
 section#left_column p.join {text-align: left;}
 p.edit {text-transform: uppercase; letter-spacing: 1px; padding-top: 10px; font-weight: 600;
 a {color: $mediumgray; }
@@ -52,8 +55,8 @@ p.notice {position: absolute; top: 48px; text-align: right; right: 10px; color: 
 
 h3.user_name {color: $mediumgray; font-size: 2.1em; padding: 20px 0 20px 0; text-transform: uppercase; letter-spacing: 1px; border-bottom: $greyborder;}
 h3.user_name.right {padding-left: 50px;}
-section#left_column {width: 300px; float: left; border-right: $greyborder; height: 100%;}
-section#right_column {width: 739px; float: left;}
+section#left_column {width: 300px; float: left;}
+section#right_column {width: 739px; float: left; border-left: $greyborder; min-height: 100%;}
 p.user_label {color: $mediumgray; font-size: 1em; padding: 2px 0 2px 0; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;}
 p.top_label { color: $mediumgray; font-size: 1em; letter-spacing: 1px; font-weight: 600; padding-bottom: 0; margin-bottom: 2px; text-transform: uppercase;}
 p.top_number { font-family: $code; font-size: 1em; color: $fieldblue;}
@@ -62,7 +65,7 @@ figure.profile {padding: 0; margin: 30px 0; width: 120px; float: left; margin-ri
 figure.profile img {width: 120px; height: 120px; }
 .post_count {width: 130px; float: left; margin-top: 30px; }
 // Articles
-section.batches {padding-left: 50px; }
+section.batches {padding-left: 50px; margin-top: 30px; }
 article.batch {width: 85%; margin: 20px 0;; padding: 10px; background: #58595B;}
 
 //Devise Links
@@ -75,3 +78,22 @@ form#new_user input[type="submit"], form#edit_user input[type="submit"] { text-a
 form#new_user input:focus, form#edit_user input:focus {box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(255, 255, 255, 0.3); background: $lightgray;}
 form#new_user label, form#edit_user label {font-family: $brandon; color: $mediumgray; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;}
 form#new_user input#user_avatar, form#edit_user input#user_avatar  {background: #fff;}
+//Post Pages
+ul.tag_list_main {list-style: none; margin-left: 0; margin-top: 30px;
+li { font-size: 1.2em; line-height: 1.4em;
+	b { color: $fieldblue; font-family: $code; font-size: .9em; padding-left: 10px;}
+	a {text-transform: uppercase; letter-spacing: 1px; color: $mediumgray; text-decoration: none; font-weight: 600; }
+
+	}
+}
+
+//Articles
+
+article.snippet {color: $darkgray; margin-bottom: 30px;}
+p.avatar {float: left; width: 25px;}
+p.username {float: left; margin-left: 10px; color: $mediumgray; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; font-size: .9em;}
+.post_content {background: $background; color: $snippetcolor; font-family: $code; font-size: 1.1em; padding: 15px 5px;}
+.ingredients {background: $background; border-top: solid 1px #6D6E70; }
+.heading { color: #fff; text-transform: uppercase; float: left; width: 100px; border-right: 1px solid #6D6E70; padding: 5px; font-size: .8em; font-weight: 600; color: $snippetcolor; letter-spacing: 1px; }
+.tag_list {float: left; width: 500px; color: $snippetcolor; padding-left: 20px; padding-top: 5px; padding-bottom: 5px; }
+.tag_list a {margin-left: 10px; text-transform: uppercase; font-family: $code; color: $snippetcolor;}

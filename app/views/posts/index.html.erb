@@ -1,27 +1,54 @@
-<h1> hey </h1>
+<div class="content_wrap show_page">
+<section id="left_column">  
+<h3 class="user_name"> Popular Tags </h3>
 
-<h1>Listing posts</h1>
+<ul class="tag_list_main">
+    <% @tags.each do |tag| %>
+      <li><%= link_to tag.name, tag_path(:tag => tag.name) %> <b>{ <%= Post.tagged_with(tag).count %> }</b> </li>
+    <% end %>
+  </ul>
+</section>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<section id="right_column">
+<h3 class="user_name right"> Code Batches </h3>
 
+<section class="batches">
 <% @posts.each do |post| %>
-  <tr>
-    <td><%= post.content %></td>
-    <td><%= post.tags %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) if user_signed_in? %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+
+
+<article class="snippet">
+<%= link_to user_path(post.user) do %>
+<span> 
+ <p class="avatar"> <%if post.user.avatar %>
+    <%= image_tag(post.user.avatar.url(:thumb)) %>
+    <%else%>
+    <%= No Profile Image %>
+    <%end%></p>
+
+
+<p class="username"> <%= post.user.username%> </p>
+</span>
+<div style="clear:both"></div>
+  <% end %>
+  <%= link_to post do %>
+ <div class="post_content">
+    <%= post.description %>
+  </div>
+  <%end%>
+  <div class="ingredients">
+    <div class="heading">
+Ingredients:
+    </div>
+    <div class="tag_list"> 
+      <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(',') %>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</article>
 <% end %>
-</table>
 
-<br />
 
-<%= link_to 'New Post', new_post_path if user_signed_in? %>
+</div>
+</div>
+</section>
+</section>
