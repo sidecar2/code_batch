@@ -11,24 +11,23 @@
     </div>
   <% end %>
  <div class="content_wrap">
-
-  <section id="left_column">  
-  <h3 class="user_name"> About Snippet </h3>
-
+  <section id="left_column">
+  <h3 class="user_name"> Batch Info </h3>
+<div class="description_wrap">
   <div class="post_label">
     <%= f.label :description, "Describe Batch" %>
   </div>
   
   <div class="post_entry">
-    <%= f.text_area :description, :placeholder => "Briefly describe Code Batch " %>
+    <%= f.text_field :description, :placeholder => "Quick Description " %>
   </div>
   
    <div class="post_label"> 
-    <%= f.label :tag_list, "Ingredients" %> 
+    <%= f.label :tag_list, "Tags" %> 
   </div>
 
   <div class="post_entry">
-      <%= f.text_field :tag_list, :placeholder => "Separate code types by commas" %>
+      <%= f.text_field :tag_list, :placeholder => "Separate Code Types By Commas" %>
   </div>
 
   <div class="post_label">
@@ -36,88 +35,89 @@
   </div>
 
   <div class="post_entry">
-    <%= f.text_area :notes %>
+    <%= f.text_field :notes, :placeholder => "Links & Additional Info" %>
   </div>
-
+</div>
 </section>
 
 <section id="right_column">
 
-  <h3 class="user_name right"> Code Batches </h3>
+  <h3 class="user_name right"> Code </h3>
    <section class="batches form">
-    <h5 class="code_area"> Snippet </h5>
       <div class="snippet_form">
-        <div class="code_type">
-          <%= f.text_field :codetype, :placeholder => "Enter Code Type" %>
-          </div>
-   
-        <div class="post_entry code">
-          <p class="post_heading"> HTML </p>
+         <div class="column left">
+          <div class="form_wrap">
+             <p class="post_heading"> HTML </p>
+             <div class="post_entry code">
             <%= f.text_area :html, 'ace-editor' => true, "ace-theme" => "solarized_light", "ace-mode" => "html", :placeholder => "Enter Code" %>
-       </div>
+            </div>
+          </div> <!--close form wrap -->
 
-       <div class="post_entry code">
-          <p class="post_heading"> HAML </p>
-            <%= f.text_area :haml, 'ace-editor' => true, "ace-theme" => "solarized_light", "ace-mode" => "haml", :placeholder => "Enter Code" %>
-       </div>
-       <div class="clear"></div>
-        <div class="post_entry code">
-           <p class="post_heading"> CSS </p>
+          <div class="form_wrap">
+        <p class="post_heading"> CSS </p>
+          <div class="post_entry code">   
             <%= f.text_area :css, 'ace-editor' => true, "ace-theme" => "solarized_light", "ace-mode" => "css", :placeholder => "Enter Code" %>
-       </div>
-         <div class="post_entry code"> 
-            <%= f.text_area :scss, 'ace-editor' => true, "ace-theme" => "solarized_light", "ace-mode" => "scss", :placeholder => "Enter Code" %>
-        <p class="post_heading"> SCSS </p>
-       </div>
-          <div class="clear"></div>
-        <div class="post_entry code">
-           <p class="post_heading"> JAVASCRIPT </p>
+          </div>
+      </div> <!--close form wrap -->
+
+         <div class="form_wrap">
+         <p class="post_heading"> JAVASCRIPT </p>
+          <div class="post_entry code">
             <%= f.text_area :javascript, 'ace-editor' => true, "ace-theme" => "solarized_light", "ace-mode" => "javascript", :placeholder => "Enter Code" %>
        </div>
-        <div class="post_entry code">
-           <p class="post_heading"> COFFEE </p>
-            <%= f.text_area :coffee, 'ace-editor' => true, "ace-theme" => "solarized_light", "ace-mode" => "coffee", :placeholder => "Enter Code" %>
-       </div>
-          <div class="clear"></div>
-       <div class="post_entry code">
-         <p class="post_heading"> PHP </p>
+     </div> <!--close form wrap -->
+
+      <div class="form_wrap">
+        <p class="post_heading"> PHP </p> 
+          <div class="post_entry code">
             <%= f.text_area :php, 'ace-editor' => true, "ace-theme" => "solarized_light", "ace-mode" => "php", :placeholder => "Enter Code" %>
        </div>
-        <div class="post_entry code">
-           <p class="post_heading"> RUBY </p>
+      </div> <!--close form wrap -->
+    </div> <!--close column left -->
+      <div class="column right">
+        <div class="form_wrap">
+          <p class="post_heading"> HAML </p>
+          <div class="post_entry code">
+          <%= f.text_area :haml, 'ace-editor' => true, "ace-theme" => "solarized_light", "ace-mode" => "haml", :placeholder => "Enter Code" %>
+          </div>
+        </div> <!--close form wrap -->
+      
+      <div class="form_wrap">
+        <p class="post_heading"> SCSS </p>
+         <div class="post_entry code"> 
+            <%= f.text_area :scss, 'ace-editor' => true, "ace-theme" => "solarized_light", "ace-mode" => "scss", :placeholder => "Enter Code" %>
+       </div>
+     </div> <!--close form wrap -->
+
+       <div class="form_wrap">
+           <p class="post_heading"> COFFEE </p>
+             <div class="post_entry code">
+            <%= f.text_area :coffee, 'ace-editor' => true, "ace-theme" => "solarized_light", "ace-mode" => "coffee", :placeholder => "Enter Code" %>
+          </div>
+      </div> <!--close form wrap -->
+
+       <div class="form_wrap">
+         <p class="post_heading"> RUBY </p>
+            <div class="post_entry code">
             <%= f.text_area :ruby, 'ace-editor' => true, "ace-theme" => "solarized_light", "ace-mode" => "ruby", :placeholder => "Enter Code" %>
        </div>
-    </div>
-
-
-</section>
- 
-
-  <h5 id="clone"> Add Another Snippet </h5>
-
+    </div> <!--close form wrap -->
+      </div> <!--close column right -->
+         <div class="clear"> </div>
+    </div> <!--close form  -->
+      <h5 class="code_area"> Fill any that apply </h5>
  <%= f.hidden_field :user_id %>
-
-
-<div class="selection">
-   <div class="post_entry code"> 
-    <%= f.text_area :ruby, 'ace-editor' => true, "ace-theme" => "solarized_light", "ace-mode" => "ruby", "height" => "350px", :placeholder => "Enter Code" %>
-</div>
-</div>
-<p class="toggle">Appetizers</p>
-
-<div class="selection">
-    Broccoli & Cream Soup $5.50 <br>
-    Clam Chowder 7.50
-</div>
-<p class="toggle">Soups</p>
-
-<div class="selection">
-    Fried Rice 4.95 <br>
-</div>
-<p class="toggle">Rice</p>
-
-  <div class="actions">
+ <div class="actions">
     <%= f.submit "Post Batch" %>
+  </div>
 </section>
 <% end %>
+</div> 
+
+
+
+
+
+
+
 

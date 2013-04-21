@@ -69,7 +69,7 @@ setTimeout(function() {
 
 
    $(document).ready(function(){
-    $('.toggle').click(function(){
+    $('.post_heading').click(function(){
         $(this).prev('.selection').slideToggle("slow");
     });
     
@@ -78,9 +78,43 @@ setTimeout(function() {
     });
 });
 
+
+$(document).ready(function(){
+    $(".toggler").click(function(e){
+        e.preventDefault();
+ 
+        $(this).find('ul').slideToggle(1);
+        $(this).toggleClass("active");
+        return false;
+    });
+});
+
+$(document).ready(function(){
+    $('.post_heading').click(function(){
+        $(this).next('.post_entry.code').slideToggle("slow");
+        $(this).toggleClass('active');
+    });
+    
+    $('.post_heading.close').click(function(){
+        $(this).slideToggle("slow");
+    });
+});
+
+
 $(document).ready(function(){
    $(".ace_editor .ace-solarized-light .ace_nobold").css({ 'height': "400px" });
    });
+
+$(document).ready(function(){
+$('<p class="post_heading long"> CSS </p>', { id: 'holdy' }).prependTo('.post_content.css');
+$('<p class="post_heading long"> HTML </p>', { id: 'holdy' }).prependTo('.post_content.html');
+$('<p class="post_heading long"> HAML </p>', { id: 'holdy' }).prependTo('.post_content.haml');
+$('<p class="post_heading long"> SCSS </p>', { id: 'holdy' }).prependTo('.post_content.scss');
+$('<p class="post_heading long"> JAVASCRIPT </p>', { id: 'holdy' }).prependTo('.post_content.javascript');
+$('<p class="post_heading long"> RUBY </p>', { id: 'holdy' }).prependTo('.post_content.ruby');
+
+ });
+ 
 //$(document).ready(function(){
 //var editor = ace.edit("editor");
 //editor.setTheme("ace/theme/twilight");

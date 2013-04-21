@@ -5,7 +5,8 @@ $background: #58595B;
 $snippetcolor: #CCCCCC;
 $lightgray: #939598;
 $darkgray: #414042;
-$greyborder: solid 1px #58595B;
+$greyborder: solid 1px #F3F4F4;
+$lightborder: solid 1px #58595B;
 $mediumgray: #808285;
 $greenbutton: #90D1C0;
 $buttonpadding: 10px 30px;
@@ -13,6 +14,8 @@ $hoverorange: #F89C57;
 $brandon: "brandon-grotesque",sans-serif;
 $fieldblue: #919BA6;
 $code: "ubuntu-mono",sans-serif;
+$proxima: "proxima-nova-soft",sans-serif;
+$offwhite: #F5F4F1;
 
 html, body {height: 100%;}
 h1.title {text-align: center; padding-top: 10px; padding-bottom: 10px; font-size: 1.8em;}
@@ -34,8 +37,8 @@ body {font-family: "brandon-grotesque",sans-serif;}
 .content_wrap {width: 1040px; margin: 0 auto;}
 .content_wrap.show_page {height: 93%;}
 .alert {background: none; border: none;}
-.status {color: #999999; position: absolute; top: 15px; right: 10px; font-size: .9em; text-transform: uppercase;}
-.status a {color: #000;}
+.status {color: #999999; position: absolute; top: 22px; right: 22px; font-size: .9em; text-transform: uppercase;}
+
 
 //green_button
 p.join {text-align: center; margin-top: 6em; margin-bottom: 6em;
@@ -53,7 +56,7 @@ a {color: $mediumgray; }
 p.notice {position: absolute; top: 48px; text-align: right; right: 10px; color: $lightgray;}
 //Page Split - User Pages
 
-h3.user_name {color: $mediumgray; font-size: 2.1em; padding: 20px 0 20px 0; text-transform: uppercase; letter-spacing: 1px; border-bottom: $greyborder;}
+h3.user_name {color: $mediumgray; font-size: 2.4em; text-shadow: 1px 1px 1px #fff; padding: 20px 0 20px 0; text-transform: uppercase; letter-spacing: 1px; border-bottom: $greyborder; font-family: $proxima; font-weight: 400;}
 h3.user_name.right {padding-left: 50px;}
 section#left_column {width: 300px; float: left;}
 section#right_column {width: 739px; float: left; border-left: $greyborder; min-height: 100%;}
@@ -69,7 +72,7 @@ section.batches {padding-left: 50px; margin-top: 30px; }
 article.batch {width: 85%; margin: 20px 0;; padding: 10px; background: #58595B;}
 
 //Devise Links
-.status a, .status, .links a  { color: $fieldblue; letter-spacing: 1px; font-weight: 600; text-transform: uppercase;}
+.status a, .status, .links a  { color: $offwhite; letter-spacing: 1px; font-weight: 600; text-transform: uppercase;}
 
 //Sign Up Forms
 form#new_user, form#edit_user {width: 480px; margin: 2em auto;}
@@ -92,7 +95,6 @@ li { font-size: 1.2em; line-height: 1.4em;
 article.snippet {color: $darkgray; margin-bottom: 30px;}
 p.avatar {float: left; width: 25px;}
 p.username {float: left; margin-left: 10px; color: $mediumgray; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; font-size: .9em;}
-.post_content {background: $background; color: $snippetcolor; font-family: $code; font-size: 1.1em; padding: 15px 5px;}
 .ingredients {background: $background; border-top: solid 1px #6D6E70; }
 .heading { color: #fff; text-transform: uppercase; float: left; width: 100px; border-right: 1px solid #6D6E70; padding: 5px; font-size: .8em; font-weight: 600; color: $snippetcolor; letter-spacing: 1px; }
 .tag_list {float: left; width: 500px; color: $snippetcolor; padding-left: 20px; padding-top: 5px; padding-bottom: 5px; }
