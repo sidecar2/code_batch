@@ -21,7 +21,7 @@ CodeBatch::Application.configure do
   config.assets.digest = true
 
 
-config.assets.precompile +=  ['ace/ace.js', 'aced-rails.js', 'ace/theme-solarized.js' ]
+config.assets.precompile +=  ['ace/ace.js', 'aced-rails.js', 'ace/theme-solarized_light.js', 'ace/theme-textmate.js', 'ace/mode-html.js', 'ace/mode-javascript.js', 'ace/mode-php.js', 'ace/mode-haml.js', 'ace/mode-scss.js', 'ace/mode-coffee.js', 'ace/mode-ruby.js', 'ace/theme-textmate.js', 'ace/theme-solarized_light.js', 'ace/mode-css.js' ]
 
 
   # Defaults to nil and saved in location specified by config.assets.prefix
