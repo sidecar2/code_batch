@@ -1,6 +1,18 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
+gem 'jquery-rails'
+gem 'bootstrap-sass', '2.0.0'
+
+gem 'bcrypt-ruby', '3.0.1'
+gem 'acts-as-taggable-on', '~> 2.3.1'
+gem "carrierwave", "~> 0.8.0"
+gem 'rmagick', '2.13.2'
+gem 'aced_rails'
+
+gem 'sunspot_rails'
+
+gem "fog", "~> 1.3.1"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -16,7 +28,7 @@ end
  group :development do
     gem 'sunspot_solr'
   end
-  
+
 gem "devise", '~> 2.2.3'
 
 # Gems used only for assets and not required
@@ -31,18 +43,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-gem 'bootstrap-sass', '2.0.0'
 
-gem 'bcrypt-ruby', '3.0.1'
-gem 'acts-as-taggable-on', '~> 2.3.1'
-gem "carrierwave", "~> 0.8.0"
-gem 'rmagick', '2.13.2'
-gem 'aced_rails'
 
-gem 'sunspot_rails'
-
-gem "fog", "~> 1.3.1"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

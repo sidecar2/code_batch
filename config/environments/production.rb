@@ -20,6 +20,10 @@ CodeBatch::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+
+config.assets.precompile +=  ['ace/ace.js', 'aced-rails.js', 'ace/theme-solarized.js' ]
+
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 
