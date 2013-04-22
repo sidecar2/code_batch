@@ -19,6 +19,8 @@ root :to => "static_pages#index"
 get 'tags/:tag', to: 'posts#index', as: :tag 
 
 get "/search" => "search#search"
+
+
 #root :to => 'users#show[params:id]' 
 #@user = current_user // should probably involved somewhere...the model??
 

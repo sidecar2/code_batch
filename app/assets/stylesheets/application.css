@@ -13,6 +13,8 @@
 
  */
 
+
+
  ::-webkit-input-placeholder { /* WebKit browsers */
     color:    #414042;
 }
@@ -32,7 +34,12 @@ article.sample_post:after  {  content: url("/assets/home_arrow.png"); height: 13
 
 body.posts, body.user_layout { background: url(/assets/post_bg4.png) repeat;}
  header.posts { background: url(/assets/header_bg.png) repeat; height: 60px; border-bottom: 1px solid #fff;}
-.upload_fixer {position: relative;}
+ .search input#search  {background: url(/assets/header_bg.png) repeat; border: none; box-shadow: none;}
+
+.search input#search:focus { background: url(/assets/search_bg_hover.png) repeat;; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 0, 0, 0.2); border-bottom: 1px solid } 
+
+.search input[type="button"], .search input[type="reset"], .search input[type="submit"] {display: none;}
+
 
 p.post_heading:after {content: url("/assets/more.png"); height: 15px; position: absolute; right: 15px; top: 4px; width: 15px; }
 form#new_user input[type="file"], form#edit_user input[type="file"]  {
@@ -55,4 +62,8 @@ form#new_user input[type="file"]:hover, form#edit_user input[type="file"]:hover 
 .file_input:hover {cursor: pointer;}
 .file_input b {color: #6D6E71; text-transform: uppercase; letter-spacing: 1px;}
 .file_input img:hover {cursor: pointer;}
+ 
+  
+
+
 

@@ -17,8 +17,8 @@
 <div class="search">
 <%= form_tag posts_path, :method => :get do %>
   <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
+    <%= text_field_tag :search, params[:search], :placeholder => "Search" %>
+    <%= submit_tag "Search >>", :name => nil %>
   </p>
 <% end %>
 
@@ -27,7 +27,7 @@
   <ul>
  <li id="list"> <%=link_to "New Batch", new_post_path %> </li>
    <li id="list"> <%= link_to "All Batches", posts_path %> </li>
-   <li id="home"><%= link_to "Profile", home_path %> </li>
+   <li id="home"><%= link_to "Profile", current_user %> </li>
  </ul>
   </nav>
   <div class="status"><% if user_signed_in? %>

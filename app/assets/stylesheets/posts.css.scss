@@ -33,8 +33,6 @@ $offwhite: #F5F4F1;
     background-size: 100% $height;
 }
 
-
-
 @mixin transition($property, $duration, $ms: false) {
     -webkit-transition: $property $duration ease-in-out;
     -moz-transition: $property $duration ease-in-out;
@@ -45,10 +43,23 @@ $offwhite: #F5F4F1;
     transition: $property $duration ease-in-out;
 }
 
-
+@mixin placeholder ($placeholder_text) {
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    $placeholder_text;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    $placeholder_text;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    $placeholder_text;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    $placeholder_text;
+}
+}
 
 header.posts .content_wrap {position: relative;}
-.search {float: left; width: 300px; height: 25px; padding-top: 22px; text-transform: uppercase; color: $offwhite; font-weight: 600; letter-spacing: 1px;}
+.search {float: left; width: 300px; height: 25px; padding-top: 18px; text-transform: uppercase; color: $offwhite; font-weight: 600; letter-spacing: 1px;}
 
 nav#post_nav { float: left; height: 25px; padding-top: 22px; 
 ul { list-style: none; margin: 0;
@@ -104,3 +115,17 @@ p.post_heading.long {width: 330px;}
 //buttonpadding
 
 .actions input {padding: $buttonpadding; background: $greenbutton; font-family: $brandon; font-size: 1.2em; margin-top: 20px; text-transform: uppercase; color: #fff; letter-spacing: 1px; font-weight: 600;}
+
+// Search Form
+
+ .search input#search::-webkit-input-placeholder {
+    color:    $offwhite; font-family: $brandon; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+.search input#search:-moz-placeholder {
+    color:    $offwhite; font-family: $brandon; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+.search input#search::-moz-placeholder   {
+    color:    $offwhite; font-family: $brandon; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+.search input#search:-ms-input-placeholder {
+    color:    $offwhite; font-family: $brandon; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+
+.search input.working[type="submit"] {display: inline-block; background: $greenbutton; color: #fff; font-weight: 600; border: none; font-family: $brandon; font-size: 0.8em; text-transform: uppercase; @include transition(left 0.8s ease-out, all .9s .5s ease-out); }

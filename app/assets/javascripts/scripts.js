@@ -78,3 +78,12 @@ $('<p class="post_heading long"> SCSS </p>', { id: 'holdy' }).prependTo('.post_c
 $('<p class="post_heading long"> JAVASCRIPT </p>', { id: 'holdy' }).prependTo('.post_content.javascript');
 $('<p class="post_heading long"> RUBY </p>', { id: 'holdy' }).prependTo('.post_content.ruby');
  });
+
+$(document).ready(function(){
+
+    $(".search input#search").click(function(){
+ $('.search input[type="submit"]').addClass("working").fadeIn();
+ 
+ 
+      });
+});
