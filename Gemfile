@@ -10,7 +10,7 @@ gem "carrierwave", "~> 0.8.0"
 gem 'rmagick', '2.13.2'
 gem 'aced_rails'
 
-gem 'sunspot_rails'
+#gem 'sunspot_rails'
 
 gem "fog", "~> 1.3.1"
 
@@ -25,9 +25,9 @@ group :production do
   gem 'pg'
 end
 
- group :development do
-    gem 'sunspot_solr'
-  end
+ #group :development do
+ #   gem 'sunspot_solr'
+ # end
 
 gem "devise", '~> 2.2.3'
 

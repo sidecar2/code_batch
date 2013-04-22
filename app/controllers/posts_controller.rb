@@ -65,12 +65,12 @@ def index
   end
 
 
-  def search
-    @search = Post.search do
-      fulltext (params[:search])
-    end
-    @posts = @search.results
-  end
+  #def search
+    #@search = Post.search do
+      #fulltext (params[:search])
+    #end
+    #@posts = @search.results
+  #end
 
   def self.tag_counts
   Tag.select("tags.*, count(taggings.tag_id) as count").

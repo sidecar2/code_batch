@@ -4,9 +4,9 @@ class Post < ActiveRecord::Base
 
     acts_as_taggable
 
-searchable do
-  text :description, :default_boost => 3
-  text :tag_list
+#searchable do
+  #text :description, :default_boost => 3
+  #text :tag_list
   
-  end
+  #end
 end
