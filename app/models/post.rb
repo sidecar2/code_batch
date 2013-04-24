@@ -5,8 +5,8 @@ class Post < ActiveRecord::Base
     belongs_to :user
 
     acts_as_taggable
-    
-    acts_as_voteable
+
+   has_reputation :votes, source: :user, aggregated_by: :sum
 
 
 

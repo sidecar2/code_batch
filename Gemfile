@@ -9,7 +9,7 @@ gem 'acts-as-taggable-on', '~> 2.3.1'
 gem "carrierwave", "~> 0.8.0"
 gem 'rmagick', '2.13.2'
 gem 'aced_rails'
-gem 'thumbs_up'
+gem 'activerecord-reputation-system', require: 'reputation_system'
 
 #gem 'sunspot_rails'
 

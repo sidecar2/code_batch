@@ -27,7 +27,7 @@
     color:    #414042;
 }
 
-figure#sample {background: url(/assets/macbook_home.png) no-repeat; height: 325px; padding: 40px 50px 40px 50px; width: 620px; margin: 10px auto;}
+figure#sample {background: url(/assets/macbook_home2.png) no-repeat; height: 325px; padding: 40px 50px 40px 50px; width: 620px; margin: 10px auto;}
 
 section#summary { background: url(/assets/summary_bg.png) repeat; border-top: 2px solid #fff;}
 
@@ -75,3 +75,6 @@ form#new_user input[type="file"]:hover, form#edit_user input[type="file"]:hover 
 .snippet_wrap:hover {background: url("/assets/post_snippetbg2.png") repeat;}
  
 p.more_about span {width: 40px; height: 40px; background: url("/assets/about_sprite.png") 0 0; display: block; }
+
+#grid {background: url(/assets/grid.png);}
+#list_view {background: url(/assets/listview.png);}

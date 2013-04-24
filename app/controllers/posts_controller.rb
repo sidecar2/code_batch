@@ -72,21 +72,18 @@ end
     joins(:taggings).group("taggings.tag_id")
 end
 
-def cast_vote
-  @post = Post.find params[:id]
-  if @post.call("#{params[:updown]}_vote_from", current_user)
-    respond_to do |format|
-      format.js
-    end
-  else
-    head :not_found
-  end
+def save
+  value = params[:type] == "up" ? 1 : -1
+  @post = Post.find(params[:id])
+  @post.add_or_update_evaluation(:votes, value, current_user)
+  redirect_to :back, notice: "You Have Saved A Batch"
 end
 
-#def vote_up
-#@post = Post.all
-#current_user.vote_for(post)
-#end
+def stored
+  @user = current_user
+@post = Post.evaluated_by(:votes, @user) 
+
+end
 
 end
 

@@ -42,6 +42,7 @@ $label_blue: #747D94;
   box-shadow: $params;
 }
 $shadows: 0px 0px 2px rgba(0, 0, 0, 0.05), 0px 0px 1px #ddd inset;
+$buttonshadows: 0 2px 2px rgba(0, 0, 0, 0.55), 0 0 6px #ddd inset;
 
 html, body {height: 100%;}
 h1.title {text-align: center; padding-top: 10px; padding-bottom: 10px; font-size: 1.8em;}
@@ -86,7 +87,7 @@ p.notice, p.alert {position: absolute; top: 65px; text-align: right; right: 10px
 h3.user_name {color: $mediumgray; font-size: 2.4em; text-shadow: 1px 1px 1px #fff; padding: 20px 0 20px 0; text-transform: uppercase; letter-spacing: 1px; border-bottom: $greyborder; font-family: $proxima; font-weight: 400;}
 h3.user_name.right {padding-left: 50px;}
 section#left_column {width: 300px; float: left;}
-section#right_column {width: 739px; float: left; border-left: $greyborder; min-height: 100%;}
+section#right_column {width: 739px; float: left; border-left: $greyborder; min-height: 100%; position: relative;}
 p.user_label {color: $mediumgray; font-size: 1em; padding: 1px 0 1px 0; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; margin: 5px 0;}
 p.top_label { color: $mediumgray; font-size: 1em; letter-spacing: 1px; font-weight: 600; padding-bottom: 0; margin-bottom: 2px; text-transform: uppercase;}
 p.top_number { font-family: $code; font-size: 1em; color: $fieldblue;}
@@ -135,3 +136,8 @@ p.username {float: left; margin-left: 10px; color: $mediumgray; text-transform: 
 
 //User Page Posts
 article.snippet a .index_post, .snippet_wrap a .index_post { color: $fieldblue;}
+
+// ICONS
+#grid, #list_view {height: 35px; width: 35px; @include border-radius(4px); @include box-shadow($buttonshadows); position: absolute; }
+#list_view {right: 0px;}
+#grid {right: 35px;}

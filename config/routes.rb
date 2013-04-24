@@ -23,13 +23,11 @@ get 'tags/:tag', to: 'posts#index', as: :tag
 
 get "/search" => "search#search"
 
-
 resources :posts do
-  collection do
-    post :vote_up
-  end
+  member { post :save }
 end
 
+get "/saved" => "posts#stored"
 
 #root :to => 'users#show[params:id]' 
 #@user = current_user // should probably involved somewhere...the model??

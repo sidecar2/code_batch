@@ -14,7 +14,7 @@ attr_accessor :login
   # attr_accessible :title, :body
 
  has_many :posts
-  acts_as_voter
+ 
 
       def self.find_first_by_auth_conditions(warden_conditions)
       conditions = warden_conditions.dup

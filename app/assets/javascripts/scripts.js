@@ -120,5 +120,33 @@ $('.search input#search').on('blur', function(){
 
 
 
+$(function(){
+$("#list_view").click(function(){
+    $(this).addClass("flip");
+    $(".content_wrap.show_page").fadeOut("fast", function() {
+        $(this).delay(130).removeClass("resized_grid").addClass("resized_list").delay(530).fadeIn("slow");
+    $("#grid").removeClass("flip");
+    // run masonry again
+    
+});
+  }); 
+    });
+
+
+$(function(){
+$("#grid").click(function(){
+    $(this).addClass("flip");
+    $(".content_wrap.show_page").fadeOut("fast", function() {
+        $(this).delay(130).removeClass("resized_list").addClass("resized_grid").delay(530).fadeIn("slow");
+    $("#list_view").removeClass("flip");
+    // run masonry again
+    
+});
+  }); 
+    });
+
+
+
+    
 
 

@@ -58,6 +58,21 @@ $offwhite: #F5F4F1;
 }
 }
 
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($params) {
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+  box-shadow: $params;
+}
+$shadows: 0px 0px 2px rgba(0, 0, 0, 0.05), 0px 0px 1px #ddd inset;
+$buttonshadows: 0 2px 2px rgba(0, 0, 0, 0.55), 0 0 6px #ddd inset;
+
 header.posts .content_wrap {position: relative;}
 .search {float: left; width: 300px; height: 25px; padding-top: 18px; text-transform: uppercase; color: $offwhite; font-weight: 600; letter-spacing: 1px;}
 
@@ -132,4 +147,6 @@ p.post_heading.long {width: 330px;}
     color:    $offwhite; font-family: $brandon; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
 
 .search input.working[type="submit"] {display: inline-block; background: $greenbutton; color: #fff; font-weight: 600; border: none; font-family: $brandon; font-size: 0.8em; text-transform: uppercase; @include transition(left 0.8s ease-out, all .9s .5s ease-out); }
+
+//Kinda Drunk Layout Change :-/
 

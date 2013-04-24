@@ -1,0 +1,10 @@
+<% @posts.each do |post| %>
+<article class="snippet">
+<%= link_to user_path(post.user) do %>
+<span> 
+ <p class="avatar"> <%if post.user.avatar %>
+    <%= image_tag(post.user.avatar.url(:thumb)) %>
+    <%else%>
+    <%= No Profile Image %>
+    <%end%></p>
+<%end%>

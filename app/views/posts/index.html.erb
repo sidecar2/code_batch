@@ -10,6 +10,8 @@
 </section>
 
 <section id="right_column">
+    <div id="list_view"> </div>
+    <div id="grid"> </div>
 <h3 class="user_name right"> Code Batches </h3>
 
 <section class="batches">
@@ -46,13 +48,13 @@ Ingredients:
     <div style="clear:both"></div>
   </div>
 </article>
-
-<%= link_to('vote for this post!', vote_up_posts_path(post), :method => :post) %>
-<% if post.votes_for > 0 %>
-<%= post.votes_for %>
-<% else %>
-<%end %>
+<% if !user_signed_in? %>
+ Please Login to Vote
+ <% else %>
+<%= pluralize post.reputation_for(:votes).to_i, "save" %>
+ <%= link_to "up", save_post_path(post, type: "up"), method: "post" %>
 <% end %>
+<%end%>
 
 
 </div>
