@@ -14,7 +14,6 @@
  */
 
 
-
  ::-webkit-input-placeholder { /* WebKit browsers */
     color:    #414042;
 }
@@ -28,20 +27,28 @@
     color:    #414042;
 }
 
-figure#sample {background: url(/assets/macbook.png) no-repeat; height: 300px; padding: 40px 50px 40px 50px; float:left; width: 540px; margin: 10px;}
+figure#sample {background: url(/assets/macbook_home.png) no-repeat; height: 325px; padding: 40px 50px 40px 50px; width: 620px; margin: 10px auto;}
 
-article.sample_post:after  {  content: url("/assets/home_arrow.png"); height: 13px; position: absolute; right: 10px; top: 16px; width: 10px;}
+section#summary { background: url(/assets/summary_bg.png) repeat; border-top: 2px solid #fff;}
+
+section#recent_posts  { background: url(/assets/post_bg4.png) repeat; border-top: 2px solid #fff;}
+article.sample_post, .profile_field { background: url(/assets/post_snippetbg.png) repeat; }
+
 
 body.posts, body.user_layout { background: url(/assets/post_bg4.png) repeat;}
+body.static { background: url(/assets/home_bg.png) repeat;}
  header.posts { background: url(/assets/header_bg.png) repeat; height: 60px; border-bottom: 1px solid #fff;}
- .search input#search  {background: url(/assets/header_bg.png) repeat; border: none; box-shadow: none;}
+ 
+ .search input#search {background: url(/assets/search_bg_hover.png) repeat; border: none; box-shadow: none;}
+.home_search {background: url(/assets/header_bg.png) repeat; padding: 5px;}
 
-.search input#search:focus { background: url(/assets/search_bg_hover.png) repeat;; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 0, 0, 0.2); border-bottom: 1px solid } 
-
-.search input[type="button"], .search input[type="reset"], .search input[type="submit"] {display: none;}
+.search input#search:focus { background: url(/assets/search_bg_hover.png) repeat; } 
 
 
 p.post_heading:after {content: url("/assets/more.png"); height: 15px; position: absolute; right: 15px; top: 4px; width: 15px; }
+.column_sample p.post_heading:after  {content: url("/assets/more.png"); height: 15px; position: absolute; right: 15px; top: 2px; width: 15px; }
+.column_sample p.post_heading.fillcode:after {content: none;}
+.upload_fixer {position: relative;}
 form#new_user input[type="file"], form#edit_user input[type="file"]  {
 position: relative;
 	text-align: left;
@@ -59,11 +66,12 @@ form#new_user input[type="file"]:hover, form#edit_user input[type="file"]:hover 
 	left: 0px;
 	z-index: 1;
 }
+
 .file_input:hover {cursor: pointer;}
 .file_input b {color: #6D6E71; text-transform: uppercase; letter-spacing: 1px;}
 .file_input img:hover {cursor: pointer;}
  
-  
-
-
-
+.snippet_wrap {background: url("/assets/post_snippetbg.png") repeat;}
+.snippet_wrap:hover {background: url("/assets/post_snippetbg2.png") repeat;}
+ 
+p.more_about span {width: 40px; height: 40px; background: url("/assets/about_sprite.png") 0 0; display: block; }

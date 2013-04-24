@@ -10,7 +10,9 @@ $buttonpadding: 10px 30px;
 $hoverorange: #F89C57; 
 $brandon: "brandon-grotesque",sans-serif;
 $code: "ubuntu-mono",sans-serif;
-
+$proxima: "proxima-nova-soft",sans-serif;
+$label_blue: #747D94;
+$offwhite: #F5F4F1;
 body {background: $darkgray; font-family: $brandon;}
 
 p {font-family: $brandon;}
@@ -21,46 +23,126 @@ p {font-family: $brandon;}
        -o-transition: $transition;
           transition: $transition;
 }
-//HEADER
-header.top {color: $lightgray;}
-h1.title {color: $mediumgray; font-size: 3.6em; text-align: center; font-weight: 600; line-height: 1.8em; letter-spacing: 1px;}
-h2.description {color: #ffffff; text-align: center; letter-spacing: 2px; font-size: 2.5em; margin: 1em 0;
+
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
 }
 
-p.helper {color: $mediumgray; text-transform: uppercase; font-family: $brandon; text-align: center; font-size: 1.5em; margin-top: 3em; font-weight: 600; letter-spacing: 1px;}
+@mixin box-shadow($params) {
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+  box-shadow: $params;
+}
+$shadows: 0px 0px 2px rgba(0, 0, 0, 0.05), 0px 0px 1px #ddd inset;
+$buttonshadows: 0 2px 2px rgba(0, 0, 0, 0.55), 0 0 6px #ddd inset;
+$homepage: 0 -1px 1px rgba(0, 0, 0, 0.05) inset; 
+//HEADER
+header.top {color: $lightgray;}
+header.top .status a, header.top .status, header.top .links a {color: $mediumgray;}
+h1.title {color: $mediumgray; font-size: 3.6em; text-align: center; font-weight: 600; line-height: 1.8em; letter-spacing: 1px; padding-bottom: 0;}
+h2.description {color: #D6D6D6; text-align: center; letter-spacing: 2px; font-family: $proxima; font-size: 1.8em; margin: 0.6em 0; font-weight: 400;}
+
+
+
+p.helper {color: $mediumgray; text-transform: uppercase; font-family: $brandon; text-align: center; font-size: 1.5em; margin-top: 3em; font-weight: 600; letter-spacing: 1px; padding-bottom: 2px;}
 p.helper.border {border-top: 1px solid #6D6E71; padding-top: 2em;  font-size: 1.3em; margin-bottom: 2em;}
 p.helper.border.half {width: 50%; margin: auto;}
-#summary {width: 100%; background: #EAEFF2; width: 100%; padding-top: 20px;}
+#summary {width: 100%; background: #EAEFF2; width: 100%; padding-top: 20px; border-top: 2px solid #fff;}
 //HOMEPAGE CONTENT SWAPPER
 h3.home_explain {margin-bottom: 1em; font-size: 1.3em; margin-top: 3.7em; color: $darkgray; text-transform: capitalize;}
-aside#sample_text {float: left; width: 35%; height: 300px;}
-aside#sample_text p {font-size: 1em; color: $mediumgray; font-weight: 600; font-family: $code;}
+section#about_home { width: 1040px; margin: 10px auto;}
+p.home_explain {width: 320px; margin-right: 40px; float: left; font-size: 1.05em; color: #7D7D7F; font-weight: 400; font-family: $code;}
+p.home_explain.third {margin-right: 0;}
+.mock_image img {width: 60px; height: 60px;}
 .column_sample {float: left; 
-h6 { color: $greenbutton; }
+h6 { color: $mediumgray; font-size: .7em; }
  }
-.column_sample.left { width: 130px; margin-left: 50px; }
-.column_sample.left p { font-size: 0.9em; line-height: 1.1em; font-family: $brandon; }
+.column_sample.left { width: 140px; height: 280px; margin-left: 85px; border-right: 1px solid #EAEAE5;  }
+.column_sample.left p { font-size: 0.8em; line-height: 1.1em; font-family: $brandon; background: #F7F8F9; padding: 3px; width: 85%; border:none; color: #ADB8BF; margin: 0; border-radius: 0; font-family: $brandon; @include box-shadow($shadows);}
 
-.column_sample.right {width: 260px; margin-left: 10px;}
-.column_sample.right h5 {text-transform: uppercase; color: #999999; font-size: 1.6em; border-bottom: 1px solid #ddd; margin-bottom: 1em; margin-top: 1em; padding-bottom: 4px;}
-article.sample_post {margin: 10px auto 10px auto; background: $lightgray; border-radius: 4px; position: relative;}
-article.sample_post p {font-family: $code; padding: 6px; font-size: .9em; line-height: 1.4em; width: 230px; }
-nav.slide_thumbs {height: 15px; position: absolute; bottom: -80px; left: 365px;
+.column_sample.right {width: 300px; }
+.column_sample.right h5, .column_sample.left h5 {text-transform: uppercase; color: $darkgray; text-shadow: 1px 1px 0 #EAEAE5; font-size: 1.2em; border-bottom: 1px solid #EAEAE5; font-weight: 400; font-family: $proxima; margin-bottom: 1em; margin-top: .5em; padding-bottom: 4px;}
+.column_sample.right h5 {padding-left: 40px;}
+article.sample_post {margin: 10px auto 10px auto; margin-left: 30px;  border-radius: 4px; position: relative; @include box-shadow($shadows);}
+article.sample_post p { padding: 6px; font-size: .8em; margin-bottom: 0; line-height: 1.4em; width: 230px; font-family: $brandon; color: $label_blue;}
+nav.slide_thumbs { width: 137px; margin: 0 auto; padding-bottom: 8px;
 ul { list-style: none; 
 	li { display: inline-block; width: 15px; height: 15px; margin: 0 5px;
 		} 
 	}
 }
+
+article.sample_post .ingredients { border-top: solid 1px #EAEAE5; }
+article.sample_post .heading { color: $label_blue; text-transform: uppercase; float: left; width: 15%; border-right: 1px solid #EAEAE5; padding: 2px; text-indent: 5px; font-size: .7em; font-weight: 600; letter-spacing: 1px; }
+article.sample_post .tag_list {float: left; color: $label_blue; padding-left: 5px; padding-top: 1px; padding-bottom: 1px; width: 75%; font-size: .75em; font-family: $code;}
 nav.slide_thumbs ul li a {display: inline-block; width: 15px; height: 15px; background: $mediumgray; border-radius: 15px; }
 nav.slide_thumbs ul li a.active {background: $greenbutton;}
 section.slide {position: absolute;}
 
-h2.title {text-align: center; text-transform: uppercase; color: $mediumgray; font-size: 2em; color: #fff; letter-spacing: 1px;}
+//Slide 2 Post Code
+
+.column_sample p.post_heading {width: 120px; margin-bottom: 10px; padding: 1px; font-size: .75em;}
+.column_sample p.post_heading.open {margin-bottom: 0;}
+.column_sample div.post_heading.fillcode {background: #fff; height: 70px; width: 124px;}
+
+p.right_split {width: 94px; padding-left: 10px; float: left; height: 70px; margin: 0; background: #494F57; font-size: .8em; line-height: 13px; }
+span.intro {color: #849A3B;}
+span.name {color: #668197;}
+span.puts {color: #2A7B8F;}
+span.title {color: #29A198;}
+
+p.left_split {width: 15px; padding-left: 5px; float: left; height: 70px; margin: 0; background: $offwhite; font-size: .8em; font-family: $code;  line-height: 13px;}
+.column_sample .column.left, .column_sample .column.right  {width: 140px;}
+.column_sample .form_wrap {width: 300px; margin-left: 20px;}
+
+p.submit_batch {font-family: $brandon; margin-top: 15px; 
+ b{ background: $greenbutton; padding: 5px 16px; font-size: .9em; color: #fff; margin-top: 25px;  @include box-shadow($shadows);  } 
+}
+p.notes {font-weight: 400; font-family: $proxima; font-size: .8em; color: $label_blue;}
+h2.title {text-align: center; text-transform: uppercase; color: $mediumgray; font-size: 2em; color: #fff; letter-spacing: 1px; @include box-shadow($shadows);}
 //Sign Up Form
 
 
 
 // edit_user
 
-
+.outer_description {position: absolute;  top: 70px; left: 640px; width: 200px; color: $mediumgray; }
+.outer_description p {font-size: 1.1em; text-shadow: 1px 1px 0 #fff;font-weight: 600; @include box-shadow($homepage); border-bottom: 1px solid #fff; padding-bottom: 3px;}
 section.about { width: 540px; margin: 0 auto; background: $mediumgray; border-radius: 4px; padding: 10px;}
+
+// search page
+.form_container input[type="image"] {width: 50px;}
+.home_search {width: 100%; background: $mediumgray; padding: 5px 0;}
+.home_search form {width: 100%; margin: 0 auto; background: $mediumgray;}
+.form_container {width: 1040px; margin: 0 auto;}
+.home_search input#search {width: 890px; height: 50px; margin: 0 auto; border: none; background: $mediumgray; color: $offwhite; font-size: 2em; font-family: $brandon; box-shadow: none; @include border-radius(0px);}
+ .home_search input#search:focus {border-bottom: 1px solid #898989;}
+ 
+.home_search input#search::-webkit-input-placeholder {
+    color:    $offwhite; font-family: $brandon; text-transform: uppercase; letter-spacing: 1px; border-radius: none; }
+.home_search input#search:-moz-placeholder {
+    color:    $offwhite; font-family: $brandon; text-transform: uppercase; letter-spacing: 1px; border-radius: none; }
+.home_search input#search::-moz-placeholder   {
+    color:    $offwhite; font-family: $brandon;  text-transform: uppercase; letter-spacing: 1px; border-radius: none; }
+.home_search input#search:-ms-input-placeholder {
+    color:    $offwhite; font-family: $brandon;  text-transform: uppercase; letter-spacing: 1px; border-radius: none; }
+.home_search input#search[placeholder], [placeholder], *[placeholder]
+{
+   color: $offwhite; font-family: $brandon; text-transform: uppercase; letter-spacing: 1px; line-height: 1.5em; border-radius: none;}
+
+ .home_search input[type="submit"] {background: #EFEEEE; padding: 6px 13px; font-family: $brandon; font-weight: 600; color: $mediumgray; font-size: .95em; text-transform: uppercase; margin-top: 7px; @include box-shadow($buttonshadows); @include border-radius(5px); }
+
+// Recent Posts
+.snippet_wrap.home {width: 300px; float: left; margin-right: 30px; padding: 10px; margin-bottom: 0;}
+.snippet_wrap.home.last {margin-right: 0;}
+.snippet_wrap.home .tag_list {width: 200px;}
+section#recent_posts { width: 100%; margin: 0 auto; padding: 50px 0;}
+
+.snippet_wrap.home .user_wrap {border-bottom: 1px solid #EAEAE5;}
+.snippet_wrap.home .heading {width: 50px;}
+//MORE ABOUT 
+
+p.more_about {font-size: 1.8em; margin: 40px 0; text-align: center; color: #7D7D7F; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;}

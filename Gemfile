@@ -9,6 +9,7 @@ gem 'acts-as-taggable-on', '~> 2.3.1'
 gem "carrierwave", "~> 0.8.0"
 gem 'rmagick', '2.13.2'
 gem 'aced_rails'
+gem 'thumbs_up'
 
 #gem 'sunspot_rails'
 
@@ -25,6 +26,10 @@ group :production do
   gem 'pg'
 end
 
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
  #group :development do
  #   gem 'sunspot_solr'
  # end
@@ -42,7 +47,6 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
 
 
 # To use ActiveModel has_secure_password

@@ -16,6 +16,32 @@ $fieldblue: #919BA6;
 $code: "ubuntu-mono",sans-serif;
 $proxima: "proxima-nova-soft",sans-serif;
 $offwhite: #F5F4F1;
+$label_blue: #747D94;
+
+
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transition($property, $duration, $ms: false) {
+    -webkit-transition: $property $duration ease-in-out;
+    -moz-transition: $property $duration ease-in-out;
+    -o-transition: $property $duration ease-in-out;
+    @if ($ms) {
+        -ms-transition: $property $duration ease-in-out;
+    }
+    transition: $property $duration ease-in-out;
+}
+
+@mixin box-shadow($params) {
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+  box-shadow: $params;
+}
+$shadows: 0px 0px 2px rgba(0, 0, 0, 0.05), 0px 0px 1px #ddd inset;
 
 html, body {height: 100%;}
 h1.title {text-align: center; padding-top: 10px; padding-bottom: 10px; font-size: 1.8em;}
@@ -41,8 +67,8 @@ body {font-family: "brandon-grotesque",sans-serif;}
 
 
 //green_button
-p.join {text-align: center; margin-top: 6em; margin-bottom: 6em;
- a {background: $greenbutton; color: $darkgray; padding: $buttonpadding; font-family: $brandon; font-size: 1.4em; letter-spacing: 1px; font-weight: 600; text-transform: uppercase;
+p.join {text-align: center; margin-top: 4em; margin-bottom: 4em;
+ a {background: $greenbutton; color: $darkgray; padding: $buttonpadding; font-family: $brandon; font-size: 1.4em; letter-spacing: 1px; font-weight: 600; text-transform: uppercase; @include border-radius(3px);
  &:hover { background: $hoverorange; color: #fff; text-decoration: none; }
  }
 }
@@ -53,23 +79,25 @@ p.edit {text-transform: uppercase; letter-spacing: 1px; padding-top: 10px; font-
 a {color: $mediumgray; }
 }
 
-p.notice {position: absolute; top: 48px; text-align: right; right: 10px; color: $lightgray;}
+p.notice, p.alert {position: absolute; top: 65px; text-align: right; right: 10px; color: $lightgray;}
+
 //Page Split - User Pages
 
 h3.user_name {color: $mediumgray; font-size: 2.4em; text-shadow: 1px 1px 1px #fff; padding: 20px 0 20px 0; text-transform: uppercase; letter-spacing: 1px; border-bottom: $greyborder; font-family: $proxima; font-weight: 400;}
 h3.user_name.right {padding-left: 50px;}
 section#left_column {width: 300px; float: left;}
 section#right_column {width: 739px; float: left; border-left: $greyborder; min-height: 100%;}
-p.user_label {color: $mediumgray; font-size: 1em; padding: 2px 0 2px 0; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;}
+p.user_label {color: $mediumgray; font-size: 1em; padding: 1px 0 1px 0; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; margin: 5px 0;}
 p.top_label { color: $mediumgray; font-size: 1em; letter-spacing: 1px; font-weight: 600; padding-bottom: 0; margin-bottom: 2px; text-transform: uppercase;}
 p.top_number { font-family: $code; font-size: 1em; color: $fieldblue;}
-.profile_field {width: 85%; margin: 10px 0; background: $mediumgray; padding: 5px;}
+.profile_field { margin: 10px 0; padding: 5px; width: 255px; border:none; color: #ADB8BF; height: 19px; margin: 0; border-radius: 0; font-family: $brandon; @include box-shadow($shadows) }
 figure.profile {padding: 0; margin: 30px 0; width: 120px; float: left; margin-right: 20px; }
-figure.profile img {width: 120px; height: 120px; }
+figure.profile img {width: 120px; height: 120px; box-shadow: 0 0 2px #ddd; }
 .post_count {width: 130px; float: left; margin-top: 30px; }
+
 // Articles
 section.batches {padding-left: 50px; margin-top: 30px; }
-article.batch {width: 85%; margin: 20px 0;; padding: 10px; background: #58595B;}
+article.batch {width: 85%; margin: 20px 0;; padding: 10px; background: #F7F8F9;}
 
 //Devise Links
 .status a, .status, .links a  { color: $offwhite; letter-spacing: 1px; font-weight: 600; text-transform: uppercase;}
@@ -83,19 +111,27 @@ form#new_user label, form#edit_user label {font-family: $brandon; color: $medium
 form#new_user input#user_avatar, form#edit_user input#user_avatar  {background: #fff;}
 //Post Pages
 ul.tag_list_main {list-style: none; margin-left: 0; margin-top: 30px;
-li { font-size: 1.2em; line-height: 1.4em;
+li { font-size: 1em; line-height: 1.4em;
 	b { color: $fieldblue; font-family: $code; font-size: .9em; padding-left: 10px;}
 	a {text-transform: uppercase; letter-spacing: 1px; color: $mediumgray; text-decoration: none; font-weight: 600; }
 
 	}
 }
 
-//Articles
+//Index Post Pages
 
-article.snippet {color: $darkgray; margin-bottom: 30px;}
+article.snippet {color: $label_blue; margin-bottom: 30px; }
+.snippet_wrap { border-radius: 4px; border: 1px solid #ddd; @include box-shadow($shadows); margin-bottom: 20px;}
+.snippet_wrap:hover {@include transition (all, .8s);}
 p.avatar {float: left; width: 25px;}
 p.username {float: left; margin-left: 10px; color: $mediumgray; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; font-size: .9em;}
-.ingredients {background: $background; border-top: solid 1px #6D6E70; }
-.heading { color: #fff; text-transform: uppercase; float: left; width: 100px; border-right: 1px solid #6D6E70; padding: 5px; font-size: .8em; font-weight: 600; color: $snippetcolor; letter-spacing: 1px; }
-.tag_list {float: left; width: 500px; color: $snippetcolor; padding-left: 20px; padding-top: 5px; padding-bottom: 5px; }
-.tag_list a {margin-left: 10px; text-transform: uppercase; font-family: $code; color: $snippetcolor;}
+.ingredients { border-top: solid 1px #EAEAE5; }
+.heading { color: $label_blue; text-transform: uppercase; float: left; width: 100px; border-right: 1px solid #EAEAE5; padding: 5px; font-size: .8em; font-weight: 600; letter-spacing: 1px; }
+.tag_list {float: left; width: 500px; color: $label_blue; padding-left: 20px; padding-top: 5px; padding-bottom: 5px; }
+.tag_list a {margin-left: 10px; text-transform: uppercase; font-family: $code; color: $label_blue;}
+
+
+.index_post {  padding: 10px; }
+
+//User Page Posts
+article.snippet a .index_post, .snippet_wrap a .index_post { color: $fieldblue;}

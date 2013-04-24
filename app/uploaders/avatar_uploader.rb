@@ -21,7 +21,7 @@ version :thumb do
 
 
   def default_url
-  "/images/your-default-image.png"
+  "/assets/stock_image.png"
 end
 
   # Override the directory where uploaded files will be stored.

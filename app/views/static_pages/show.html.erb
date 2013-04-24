@@ -149,13 +149,11 @@ found a decent solution for quickly storing/accessing frequently used code in on
 
   <div class="snippet_wrap home">
   	<div class="user_wrap">
-  	<%= link_to user_path(post.user) do %>
   	<p class="avatar"> <%if post.user.avatar %>
     <%= image_tag(post.user.avatar.url(:thumb)) %>
     <%else%>
     <%= No Profile Image %>
     <%end%></p>
-    <%end%>
   	<p class="username"> <%= post.user.username%> </p>
   	<div style="clear:both"></div>
   </div>
@@ -177,12 +175,6 @@ found a decent solution for quickly storing/accessing frequently used code in on
 
 </div>
  </section>
-
- <ul class="tag_list_main">
-    <% @tags.each do |tag| %>
-      <li><%= link_to tag.name, tag_path(:tag => tag.name) %> <b>{ <%= Post.tagged_with(tag).count %> }</b> </li>
-    <% end %>
-  </ul>
 
  <section id="home_more">
  <p class="helper"> More Questions?</p>

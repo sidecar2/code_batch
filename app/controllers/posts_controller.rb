@@ -4,21 +4,16 @@ class PostsController < ApplicationController
 
 def index
 
-  @tags = ActsAsTaggableOn::Tag.all(:order=>'name')
+      @tags = ActsAsTaggableOn::Tag.all(:order=>'name')
   @tag_count = ActsAsTaggableOn::Tag.count(:id)
  
    if params[:tag] 
 
     @posts = Post.tagged_with(params[:tag])
-  else 
-    @posts = current_user.posts.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @posts }
-    end
+  else
+     @posts = Post.last(20)
   end
-  end
+end
 
   def new
     @post = Post.new
@@ -77,4 +72,22 @@ def index
     joins(:taggings).group("taggings.tag_id")
 end
 
+def cast_vote
+  @post = Post.find params[:id]
+  if @post.call("#{params[:updown]}_vote_from", current_user)
+    respond_to do |format|
+      format.js
+    end
+  else
+    head :not_found
+  end
 end
+
+#def vote_up
+#@post = Post.all
+#current_user.vote_for(post)
+#end
+
+end
+
+

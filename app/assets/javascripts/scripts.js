@@ -30,7 +30,10 @@ $("h5#clone").click(function(){
 });
 setTimeout(function() {
     $('p.notice').fadeOut('slow');
-}, 2000); // <
+}, 2000); 
+
+
+// <
 $(document).ready(function(){
     $('p.post_heading').click(function(){
         $(this).prev('.ace_editor').slideToggle("slow");
@@ -40,6 +43,7 @@ $(document).ready(function(){
         $(this).slideToggle("slow");
     });
 });
+
 $(document).ready(function(){
     $('.post_heading').click(function(){
         $(this).prev('.selection').slideToggle("slow");
@@ -49,6 +53,7 @@ $(document).ready(function(){
         $(this).slideToggle("slow");
     });
 });
+
 $(document).ready(function(){
     $(".toggler").click(function(e){
         e.preventDefault();
@@ -58,6 +63,7 @@ $(document).ready(function(){
         return false;
     });
 });
+
 $(document).ready(function(){
     $('.post_heading').click(function(){
         $(this).next('.post_entry.code').slideToggle("slow");
@@ -67,9 +73,26 @@ $(document).ready(function(){
         $(this).slideToggle("slow");
     });
 });
+
+
+$(document).ready(function(){
+    $('.more_about').click(function(){
+        $(this).next('section#about').slideToggle("slow");
+        $(this).toggleClass('open');
+    });
+    $('.more_about.close').click(function(){
+        $(this).slideToggle("slow");
+    });
+    $("section#recent_posts .content_wrap > div:nth-child(4n)").addClass('last');
+});
+
+
+
+
 $(document).ready(function(){
    $(".ace_editor .ace-solarized-light .ace_nobold").css({ 'height': "400px" });
    });
+
 $(document).ready(function(){
 $('<p class="post_heading long"> CSS </p>', { id: 'holdy' }).prependTo('.post_content.css');
 $('<p class="post_heading long"> HTML </p>', { id: 'holdy' }).prependTo('.post_content.html');
@@ -79,11 +102,23 @@ $('<p class="post_heading long"> JAVASCRIPT </p>', { id: 'holdy' }).prependTo('.
 $('<p class="post_heading long"> RUBY </p>', { id: 'holdy' }).prependTo('.post_content.ruby');
  });
 
+
 $(document).ready(function(){
 
     $(".search input#search").click(function(){
- $('.search input[type="submit"]').addClass("working").fadeIn();
- 
- 
+ $('.search input[type="image"]').addClass("working").fadeIn(300);
+
       });
 });
+
+$('.search input#search').on('blur', function(){
+   $(this).next('input').removeClass('main').addClass('working');
+}).on('focus', function(){
+  $(this).next('input').removeClass('input-desc').addClass('input-desc-hover');
+});
+
+
+
+
+
+

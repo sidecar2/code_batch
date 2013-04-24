@@ -76,7 +76,7 @@ ul { list-style: none; margin: 0;
 .post_label label, .description_label {  color: $mediumgray; font-size: 1em; font-weight: 600; margin: 6px 0; text-transform: uppercase;}
 
 //POST FORM
-.post_entry textarea, .post_entry input {width: 255px; border:none; background: #F7F8F9; color: #ADB8BF; height: 19px; margin: 0; border-radius: 0; font-family: $brandon;}
+.post_entry textarea, .post_entry input {width: 255px; border:none; background: #F7F8F9; color: #ADB8BF; height: 19px; margin: 0; border-radius: 0; font-family: $brandon; letter-spacing: 0; font-size: .9em;}
 
 input#post_codetype {height: 20px; margin-left: 35px; width: 150px; background: none; width: 150px; margin-bottom: 0; border: 0; border-radius: 0px 0px; box-shadow: none; border-bottom: solid 1px $mediumgray;}
 .post_entry.code textarea {width: 300px; display: block; margin: 0px auto; background: #656666; float: left;}
@@ -103,7 +103,7 @@ p.post_heading.active { @include gradient(hsl(240, 1%, 97%), hsl(208, 3%, 91%), 
 //Editor Styles
 .post_content .ace_editor .ace_gutter-layer, .post_entry.code .ace_editor .ace_gutter-layer { border-right: solid 1px #E6E7E8;}
 .post_content .ace_editor.ace-tm .ace_gutter, .post_content .ace_editor.ace-solarized-light .ace_gutter, .post_entry.code .ace_editor.ace-tm .ace_gutter, .post_entry.code .ace_editor.ace-solarized-light .ace_gutter { background-color: #F3F3F3;}
-.post_content .ace_editor.ace-solarized-light .ace_scroller, .post_entry.code .ace_editor.ace-solarized-light .ace_scroller, .post_content .ace_editor .ace-tm .ace_scroller {background-color: #494F57;} 
+.post_content .ace_editor.ace-solarized-light .ace_scroller, .post_entry.code .ace_editor.ace-solarized-light .ace_scroller, .post_content .ace_editor .ace-tm .ace_scroller, .post_content .ace-tm .ace_scroller {background-color: #494F57;} 
 .post_content .ace_editor.ace-solarized-light .ace_marker-layer .ace_active-line, .post_entry.code .ace_editor.ace-solarized-light .ace_marker-layer .ace_active-line {background: none; border-bottom: dotted 1px #ddd;}
 
 .description_content {background: #F7F8F9; width: 250px; padding: 3px; color: #ADB8BF; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;}
@@ -118,6 +118,10 @@ p.post_heading.long {width: 330px;}
 
 // Search Form
 
+ .search input[type="image"] {display: none; margin: 0; padding: 0 0 10px 5px; margin: 0 3px; border-radius: 2px;}
+
+.search input#search:hover {cursor: pointer;}
+.search input#search {color: $offwhite; border-bottom: none;}
  .search input#search::-webkit-input-placeholder {
     color:    $offwhite; font-family: $brandon; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
 .search input#search:-moz-placeholder {
@@ -127,5 +131,5 @@ p.post_heading.long {width: 330px;}
 .search input#search:-ms-input-placeholder {
     color:    $offwhite; font-family: $brandon; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
 
-
 .search input.working[type="submit"] {display: inline-block; background: $greenbutton; color: #fff; font-weight: 600; border: none; font-family: $brandon; font-size: 0.8em; text-transform: uppercase; @include transition(left 0.8s ease-out, all .9s .5s ease-out); }
+

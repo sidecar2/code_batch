@@ -7,11 +7,14 @@ devise_for :users, :path_prefix => '!'
 resources :users 
 resources :posts
 
+
+
 match '/users/:id', :to => 'users#show', :as => :user
 #match ":username" => 'users#show', :as => :username
 match '/home', to: 'user#show'
  match '/help', to: 'static_pages#help'
  match '/about', to: 'static_pages#about'
+match '/batches', to: 'static_pages#home'
 match '/sign_up', to: 'devise/registrations#new'
 
 root :to => "static_pages#index"
@@ -19,6 +22,13 @@ root :to => "static_pages#index"
 get 'tags/:tag', to: 'posts#index', as: :tag 
 
 get "/search" => "search#search"
+
+
+resources :posts do
+  collection do
+    post :vote_up
+  end
+end
 
 
 #root :to => 'users#show[params:id]' 
