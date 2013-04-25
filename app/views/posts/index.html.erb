@@ -18,46 +18,56 @@
 <% @posts.each do |post| %>
 
 <article class="snippet">
-<%= link_to user_path(post.user) do %>
-<span> 
- <p class="avatar"> <%if post.user.avatar %>
+   <div class="snippet_wrap">
+    <div class="user_wrap">
+  <%= link_to user_path(post.user) do %>
+  <span> 
+  <p class="avatar"> <%if post.user.avatar %>
     <%= image_tag(post.user.avatar.url(:thumb)) %>
     <%else%>
     <%= No Profile Image %>
-    <%end%></p>
-
+    <%end%>
+  </p>
+ 
 
 <p class="username"> <%= post.user.username%> </p>
 </span>
 <div style="clear:both"></div>
   <% end %>
+   </div>
   <%= link_to post do %>
 
-  <div class="snippet_wrap">
+ 
  <div class="index_post">
     <%= post.description %>
   </div>
   <%end%>
   <div class="ingredients">
     <div class="heading">
-Ingredients:
+Tags:
     </div>
     <div class="tag_list"> 
       <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(',') %>
     </div>
     <div style="clear:both"></div>
   </div>
-</article>
-<% if !user_signed_in? %>
- Please Login to Vote
+  </div>
+  <% if !user_signed_in? %>
  <% else %>
-<%= pluralize post.reputation_for(:votes).to_i, "save" %>
- <%= link_to "up", save_post_path(post, type: "up"), method: "post" %>
+ <div class="saving">
+ <span><%= link_to image_tag("save.png", :border => 0), save_post_path(post, type: "up"), method: "post" %></span>
+ <% if post.reputation_for(:votes).to_i > 0 %>
+ <%= pluralize post.reputation_for(:votes).to_i, "save" %>
+ <%else%>
+ <%end%>
+</div>
 <% end %>
+</article>
+
 <%end%>
 
 
-</div>
+
 </div>
 </section>
 </section>

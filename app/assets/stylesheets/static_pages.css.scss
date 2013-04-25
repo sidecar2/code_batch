@@ -13,6 +13,8 @@ $code: "ubuntu-mono",sans-serif;
 $proxima: "proxima-nova-soft",sans-serif;
 $label_blue: #747D94;
 $offwhite: #F5F4F1;
+$fieldblue: #919BA6;
+
 body {background: $darkgray; font-family: $brandon;}
 
 p {font-family: $brandon;}
@@ -38,7 +40,9 @@ p {font-family: $brandon;}
 }
 $shadows: 0px 0px 2px rgba(0, 0, 0, 0.05), 0px 0px 1px #ddd inset;
 $buttonshadows: 0 2px 2px rgba(0, 0, 0, 0.55), 0 0 6px #ddd inset;
-$homepage: 0 -1px 1px rgba(0, 0, 0, 0.05) inset; 
+$homepage: 0 -1px 1px rgba(0, 0, 0, 0.05) inset;
+$none: 0 0px 0px rgba(0, 0, 0, 0.0) inset;
+
 //HEADER
 header.top {color: $lightgray;}
 header.top .status a, header.top .status, header.top .links a {color: $mediumgray;}
@@ -60,9 +64,10 @@ p.home_explain.third {margin-right: 0;}
 .column_sample {float: left; 
 h6 { color: $mediumgray; font-size: .7em; }
  }
+ .column_sample h6 b {font-family: $code; color: $fieldblue; }
 .column_sample.left { width: 140px; height: 280px; margin-left: 85px; border-right: 1px solid #EAEAE5;  }
-.column_sample.left p { font-size: 0.8em; line-height: 1.1em; font-family: $brandon; background: #F7F8F9; padding: 3px; width: 85%; border:none; color: #ADB8BF; margin: 0; border-radius: 0; font-family: $brandon; @include box-shadow($shadows);}
-
+.column_sample.left p { font-size: 0.8em; line-height: 1.1em; font-family: $brandon;  padding: 3px; width: 85%; border:none; color: #ADB8BF; margin: 0; border-radius: 0; font-family: $brandon; @include box-shadow($shadows);}
+section#one .column_sample.left p { background: #F7F8F9; }
 .column_sample.right {width: 300px; }
 .column_sample.right h5, .column_sample.left h5 {text-transform: uppercase; color: $darkgray; text-shadow: 1px 1px 0 #EAEAE5; font-size: 1.2em; border-bottom: 1px solid #EAEAE5; font-weight: 400; font-family: $proxima; margin-bottom: 1em; margin-top: .5em; padding-bottom: 4px;}
 .column_sample.right h5 {padding-left: 40px;}
@@ -99,7 +104,7 @@ p.left_split {width: 15px; padding-left: 5px; float: left; height: 70px; margin:
 .column_sample .form_wrap {width: 300px; margin-left: 20px;}
 
 p.submit_batch {font-family: $brandon; margin-top: 15px; 
- b{ background: $greenbutton; padding: 5px 16px; font-size: .9em; color: #fff; margin-top: 25px;  @include box-shadow($shadows);  } 
+ b{ background: $greenbutton; padding: 5px 16px; font-size: .9em; color: #fff; margin-top: 25px;  @include box-shadow($shadows); @include border-radius(4px);  } 
 }
 p.notes {font-weight: 400; font-family: $proxima; font-size: .8em; color: $label_blue;}
 h2.title {text-align: center; text-transform: uppercase; color: $mediumgray; font-size: 2em; color: #fff; letter-spacing: 1px; @include box-shadow($shadows);}
@@ -146,3 +151,9 @@ section#recent_posts { width: 100%; margin: 0 auto; padding: 50px 0;}
 //MORE ABOUT 
 
 p.more_about {font-size: 1.8em; margin: 40px 0; text-align: center; color: #7D7D7F; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;}
+
+ .outer_description p.demo_link {border-bottom: none; @include box-shadow($none); margin-top: 20px;
+  a {background: $greenbutton; color: $offwhite; padding: 6px 11px; text-shadow: none; @include border-radius(4px); @include box-shadow($shadows);
+   &:hover { background: #EE7B46; @include transition(background, .8s); text-decoration: none; }
+}
+}

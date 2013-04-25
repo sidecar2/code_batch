@@ -19,7 +19,7 @@
   </div>
   
   <div class="post_entry">
-    <%= f.text_field :description, :placeholder => "Quick Description " %>
+    <%= f.text_field :description, :placeholder => "120 Characters Max " %>
   </div>
   
    <div class="post_label"> 
@@ -105,11 +105,16 @@
       </div> <!--close column right -->
          <div class="clear"> </div>
     </div> <!--close form  -->
+    <% if user_signed_in?%>
       <h5 class="code_area"> Fill any that apply </h5>
  <%= f.hidden_field :user_id %>
  <div class="actions">
     <%= f.submit "Post Batch" %>
   </div>
+  <% else %>
+  <p class="join preview"><%= link_to "Create Account To Save", new_user_registration_path %></p>
+  <% end %>
+
 </section>
 <% end %>
 </div> 

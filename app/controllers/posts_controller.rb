@@ -81,7 +81,7 @@ end
 
 def stored
   @user = current_user
-@post = Post.evaluated_by(:votes, @user) 
+@posts = Post.evaluated_by(:votes, @user) 
 
 end
 

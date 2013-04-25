@@ -54,6 +54,7 @@
 						<p> Quickly add multiple types of code in a single interface  </p>
 						<p> Validate on the fly with an embedded Ace Editor </p>
 						<p> Tag and describe code snippets for easy recall  </p>
+						<p class="demo_link"> <%=link_to "Demo Editor", new_post_path %> </p>
 					</div>
 				</section> <!--END SLIDE -->
 
@@ -103,6 +104,75 @@
 						<p> Build a personal collection of your most used code batches</p>
 						<p> Make batches public or private </p>
 						<p> Share relevant code snippets with friends and colleagues </p>
+						<p class="demo_link"> <%=link_to "Sample Profile", posts_path %> </p>
+					</div>
+				</section><!--END SLIDE ONE -->
+
+					<section id="three" class="slide">
+					<div class="column_sample left"> 
+						<h5>Popular Tags</h5>
+						
+						<h6>jQuery <b>{164} </b></h6>
+						<h6>SASS MIX-INS <b>{102} </b></h6>
+						<h6>JAVASCRIPT <b>{92}</b> </h6>
+						<h6>CANVAS <b> {76} </b> </h6>
+						<h6>CSS3 <b>{64} </b></h6>
+						<h6>HOVER EFFECTS <b>{55}</b></h6>
+						<h6>AJAX <b> {43}</b> </h6>
+						<h6>COFFEE SCRIPT <b> {32} </b> </h6>
+						<h6>DATA VIZ <b> {24} </b> </h6>
+						<h6>RUBY <b> {21} </b> </h6>
+						<h6>MEDIA QUERIES <b> {14} </b> </h6>
+						<h6>REFINERY CMS <b> {12} </b> </h6>
+						<h6>DEVISE <b> {8} </b> </h6>
+
+						
+					</div>
+					<div class="column_sample right">
+						<h5>Code Batches</h5>
+						<article class="sample_post">
+						<p> Animated background gradient </p> 
+						<div class="ingredients">
+   						 <div class="heading"> Tags:
+    					</div>
+    					<div class="tag_list"> jQuery, CSS3    </div>
+    					<div style="clear:both"></div>
+  						</div>
+						</article>
+
+						<article class="sample_post">
+						<p> Change header class as page scrolls down</p> 
+						<div class="ingredients">
+   						 <div class="heading"> Tags:
+    					</div>
+    					<div class="tag_list"> Javascript, HTML5, Canvas    </div>
+    					<div style="clear:both"></div>
+  						</div>
+						</article>
+						<article class="sample_post">
+						<p> Animate D3.js graphs as they become visible on page</p> 
+						<div class="ingredients">
+   						 <div class="heading"> Tags:
+    					</div>
+    					<div class="tag_list"> CSS3, JAVASCRIPT    </div>
+    					<div style="clear:both"></div>
+  						</div>
+						</article>
+						<article class="sample_post">
+						<p> Change body class and fade out</p> 
+						<div class="ingredients">
+   						 <div class="heading"> Tags:
+    					</div>
+    					<div class="tag_list"> jQuery, CSS    </div>
+    					<div style="clear:both"></div>
+  						</div>
+						</article>
+					</div>
+					<div class="outer_description">
+						<p> Build a personal collection of your most used code batches</p>
+						<p> Make batches public or private </p>
+						<p> Share relevant code snippets with friends and colleagues </p>
+						<p class="demo_link"> <%=link_to "View Batches", posts_path %> </p>
 					</div>
 				</section><!--END SLIDE ONE -->
 				
@@ -177,18 +247,11 @@ found a decent solution for quickly storing/accessing frequently used code in on
 
 </div>
  </section>
-
- <ul class="tag_list_main">
-    <% @tags.each do |tag| %>
-      <li><%= link_to tag.name, tag_path(:tag => tag.name) %> <b>{ <%= Post.tagged_with(tag).count %> }</b> </li>
-    <% end %>
-  </ul>
-
  <section id="home_more">
  <p class="helper"> More Questions?</p>
- <p class="join"> <%= link_to "More Info", about_path %> </p>
+ <p class="join"> <%= mail_to "seidler.andrew@gmail.com", "Email Me" %> </p>
  <p class="helper border">THIS IS A DEMO RUBY ON RAILS APP CREATED FOR GA BY ANDREW SEIDLER</p>
-  <p class="helper border half">EMAIL ME</p>
+  <p class="helper border half">*</p>
  <p>
 
 </section>

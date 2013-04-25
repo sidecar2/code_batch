@@ -78,7 +78,7 @@ header.posts .content_wrap {position: relative;}
 
 nav#post_nav { float: left; height: 25px; padding-top: 22px; 
 ul { list-style: none; margin: 0;
-	li#new, li#list, li#home {display: inline; padding-right: 15px; color: #A7A9AC; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+	li#new, li#list, li#home, li#saved {display: inline; padding-right: 15px; color: #A7A9AC; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
 	a {color: $offwhite; 		
 		}
 	}
@@ -149,4 +149,29 @@ p.post_heading.long {width: 330px;}
 .search input.working[type="submit"] {display: inline-block; background: $greenbutton; color: #fff; font-weight: 600; border: none; font-family: $brandon; font-size: 0.8em; text-transform: uppercase; @include transition(left 0.8s ease-out, all .9s .5s ease-out); }
 
 //Kinda Drunk Layout Change :-/
+
+p.join.preview {text-align: left;  
+    a{ color: $offwhite; font-size: 1.2em;
+        &:hover { @include transition(all, .6s);
+
+        }
+    }
+}
+
+//Kinda Drunk Layout Change :-/
+
+.content_wrap.show_page.resized_grid article.snippet {width: 200px; float: left; margin: 20px; }
+.content_wrap.show_page.resized_grid .snippet_wrap {padding: 2px; height: 220px;}
+.content_wrap.show_page.resized_grid .tag_list {width: 170px; margin: 0 auto;  padding: 10px 3px 10px 3px; border-top: 1px solid #EAEAE5; border-bottom: 1px solid #EAEAE5;}
+.content_wrap.show_page.resized_grid .heading {width: 50px; float: none; }
+.content_wrap.show_page.resized_grid  .saving {margin-left: 0; top: 195px; left: 10px;}
+.content_wrap.show_page.resized_grid .user_wrap {padding:10px 10px 0 10px;} 
+
+//ESCAPE MARGINS
+.content_wrap.show_page.resized_grid section.batches .snippet:nth-child(3n+3) {
+  margin-right: 0;
+}
+.content_wrap.show_page.resized_grid section.batches .snippet:nth-child(3n+1) {
+  margin-left: 0;
+}
 

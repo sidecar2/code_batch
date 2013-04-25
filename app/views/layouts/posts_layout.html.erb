@@ -25,12 +25,12 @@
 </div>
 <nav id="post_nav">
   <ul>
- <li id="list"> <%=link_to "New Batch", new_post_path %> </li>
-   <li id="list"> <%= link_to "All Batches", posts_path %> </li>
+   <li id="list"> <%= link_to "Batches", posts_path %> </li>
+    <li id="list"> <%=link_to "New Batch", new_post_path %> </li>
+     <% if user_signed_in? %>
    <li id="home"><%= link_to "Profile", current_user %> </li>
-   <%#  <li id="home"><%= link_to "Saved", vote_up_posts_path(@user)  </li>%>
-  
-
+    <li id="saved"><%= link_to "Saved", saved_path %>  </li>
+  <% end%>
  </ul>
   </nav>
   <div class="status"><% if user_signed_in? %>

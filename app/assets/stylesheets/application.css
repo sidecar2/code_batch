@@ -32,7 +32,7 @@ figure#sample {background: url(/assets/macbook_home2.png) no-repeat; height: 325
 section#summary { background: url(/assets/summary_bg.png) repeat; border-top: 2px solid #fff;}
 
 section#recent_posts  { background: url(/assets/post_bg4.png) repeat; border-top: 2px solid #fff;}
-article.sample_post, .profile_field { background: url(/assets/post_snippetbg.png) repeat; }
+article.sample_post, .profile_field, section#two .column_sample.left p { background: url(/assets/post_snippetbg.png) repeat; }
 
 
 body.posts, body.user_layout { background: url(/assets/post_bg4.png) repeat;}
@@ -76,5 +76,5 @@ form#new_user input[type="file"]:hover, form#edit_user input[type="file"]:hover 
  
 p.more_about span {width: 40px; height: 40px; background: url("/assets/about_sprite.png") 0 0; display: block; }
 
-#grid {background: url(/assets/grid.png);}
-#list_view {background: url(/assets/listview.png);}
+#grid {background: url(/assets/grid2.png);}
+#list_view {background: url(/assets/list2.png);}

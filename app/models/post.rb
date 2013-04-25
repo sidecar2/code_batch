@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
 
    has_reputation :votes, source: :user, aggregated_by: :sum
 
-
+validates :description, :presence => true, :length => { :maximum => 120 } 
 
 
 #searchable do

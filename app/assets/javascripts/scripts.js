@@ -111,6 +111,7 @@ $(document).ready(function(){
       });
 });
 
+
 $('.search input#search').on('blur', function(){
    $(this).next('input').removeClass('main').addClass('working');
 }).on('focus', function(){
@@ -126,8 +127,9 @@ $("#list_view").click(function(){
     $(".content_wrap.show_page").fadeOut("fast", function() {
         $(this).delay(130).removeClass("resized_grid").addClass("resized_list").delay(530).fadeIn("slow");
     $("#grid").removeClass("flip");
-    // run masonry again
-    
+    // working 
+    $("content_wrap.show_page.resized_gridsection section.batches > .snippet:nth-child(3n+3)").addClass('last');
+
 });
   }); 
     });
@@ -139,7 +141,7 @@ $("#grid").click(function(){
     $(".content_wrap.show_page").fadeOut("fast", function() {
         $(this).delay(130).removeClass("resized_list").addClass("resized_grid").delay(530).fadeIn("slow");
     $("#list_view").removeClass("flip");
-    // run masonry again
+    // 
     
 });
   }); 
