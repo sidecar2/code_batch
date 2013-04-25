@@ -16,20 +16,20 @@ ActiveRecord::Schema.define(:version => 20130425020630) do
   create_table "posts", :force => true do |t|
     t.text     "content"
     t.string   "tags"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "user_id"
     t.string   "description"
     t.string   "notes"
     t.string   "codetype"
-    t.text     "css",         :limit => 255
-    t.text     "html",        :limit => 255
-    t.text     "haml",        :limit => 255
-    t.text     "scss",        :limit => 255
-    t.text     "javascript",  :limit => 255
-    t.string   "coffee"
-    t.text     "php",         :limit => 255
-    t.text     "ruby",        :limit => 255
+    t.text     "css"
+    t.text     "html"
+    t.text     "haml"
+    t.text     "scss"
+    t.text     "javascript"
+    t.text     "coffee"
+    t.text     "php"
+    t.text     "ruby"
   end
 
   create_table "rs_evaluations", :force => true do |t|

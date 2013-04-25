@@ -20,5 +20,6 @@ class ChangePostColumnsText < ActiveRecord::Migration
   	change_column :posts, :javascript, :string
   	change_column :posts, :php, :string
   	change_column :posts, :ruby, :string
+  	change_column :posts, :coffee, :string
   end
 end
