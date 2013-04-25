@@ -143,7 +143,7 @@ a { color: #808285; font-family: $brandon;
 
 
 //User Page Posts
-article.snippet a .index_post, .snippet_wrap a .index_post { color: $fieldblue;}
+article.snippet a .index_post, .snippet_wrap a .index_post { color: $fieldblue; font-size: .8em; font-family: $code;}
 
 body.user_layout .snippet_wrap {margin-bottom: 20px;}
 body.user_layout p.join a {color: $offwhite;}
