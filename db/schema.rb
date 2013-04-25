@@ -11,25 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130424184740) do
+ActiveRecord::Schema.define(:version => 20130425020630) do
 
   create_table "posts", :force => true do |t|
     t.text     "content"
     t.string   "tags"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
     t.integer  "user_id"
     t.string   "description"
     t.string   "notes"
     t.string   "codetype"
-    t.string   "css"
-    t.string   "html"
-    t.string   "haml"
-    t.string   "scss"
-    t.string   "javascript"
+    t.text     "css",         :limit => 255
+    t.text     "html",        :limit => 255
+    t.text     "haml",        :limit => 255
+    t.text     "scss",        :limit => 255
+    t.text     "javascript",  :limit => 255
     t.string   "coffee"
-    t.string   "php"
-    t.string   "ruby"
+    t.text     "php",         :limit => 255
+    t.text     "ruby",        :limit => 255
   end
 
   create_table "rs_evaluations", :force => true do |t|
