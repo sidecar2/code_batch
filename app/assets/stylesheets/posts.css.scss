@@ -181,5 +181,7 @@ p.join.preview {text-align: left;
 &:hover {text-decoration: none; color: $mediumgray;}
 }
 .edit.destroy {padding-left: 50px; margin-top: 20px;}
+
+h3.delete {text-align: center; margin-top: 50px; color: $mediumgray;}
 body.posts .status a, body.posts .status, body.posts .links a, a, body.user_layout .status a, body.user_layout .status, body.user_layout .links a   {color: #F5F4F1;}
 body.devise .status a, body.devise .status, body.devise .links a, a { color: #808285; font-weight: 600;text-transform: uppercase; }
