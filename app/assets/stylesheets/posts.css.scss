@@ -175,5 +175,11 @@ p.join.preview {text-align: left;
   margin-left: 0;
 }
 
+//edit region
+.edit {width: 100%; margin-top: 10px; clear: both;}
+.edit a { background: none; font-size: 1em; text-transform: uppercase; color: $mediumgray; margin: 30px 0 0; font-family: $proxima; font-weight: 400; 
+&:hover {text-decoration: none; color: $mediumgray;}
+}
+.edit.destroy {padding-left: 50px; margin-top: 20px;}
 body.posts .status a, body.posts .status, body.posts .links a, a, body.user_layout .status a, body.user_layout .status, body.user_layout .links a   {color: #F5F4F1;}
 body.devise .status a, body.devise .status, body.devise .links a, a { color: #808285; font-weight: 600;text-transform: uppercase; }

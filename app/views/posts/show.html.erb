@@ -98,6 +98,11 @@
 	</div>
 	<%end%>
 </div>
+<div class="edit"><% if user_signed_in? & current_user %>
+<%= link_to 'Edit', edit_post_path(@post) %> 
+<%end%>
+</div>
 </div>
 </section>
+
 </section>
