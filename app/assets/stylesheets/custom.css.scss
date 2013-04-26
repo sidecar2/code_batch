@@ -102,15 +102,17 @@ section.batches {padding-left: 50px; margin-top: 30px; }
 article.batch {width: 85%; margin: 20px 0;; padding: 10px; background: #F7F8F9;}
 
 //Devise Links
-.status a, .status, .links a  { color: $offwhite; letter-spacing: 1px; font-weight: 600; text-transform: uppercase;}
+.status a, .status, .links a  { color: $mediumgray; letter-spacing: 1px; font-weight: 600; text-transform: uppercase;}
 
 //Sign Up Forms
 form#new_user, form#edit_user {width: 480px; margin: 2em auto;}
 form#new_user input, form#new_user textarea, form#new_user select, .uneditable-input, form#edit_user input, form#edit_user textarea, form#edit_user select   {width: 480px; background: $mediumgray; border: none; color: $darkgray; font-weight: 600;}
-form#new_user input[type="submit"], form#edit_user input[type="submit"] { text-align: center; margin: 2em auto; width: 160px; display: block; padding: 6px 60px; background: $greenbutton; font-size: 1.4em; text-transform: uppercase; font-family: $brandon; color: $darkgray; border-radius: none; font-weight: 600;}
+form#new_user input[type="submit"], form#edit_user input[type="submit"] { text-align: center; margin: 2em auto; width: 160px; display: block; padding: 12px 60px; background: $greenbutton; font-size: 1.4em; text-transform: uppercase; font-family: $brandon; color: $darkgray; border-radius: none; font-weight: 600;}
 form#new_user input:focus, form#edit_user input:focus {box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(255, 255, 255, 0.3); background: $lightgray;}
 form#new_user label, form#edit_user label {font-family: $brandon; color: $mediumgray; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;}
 form#new_user input#user_avatar, form#edit_user input#user_avatar  {background: #fff;}
+
+form#new_user input#user_remember_me {text-align: left; width: 15px;}
 //Post Pages
 ul.tag_list_main {list-style: none; margin-left: 0; margin-top: 30px;
 li { font-size: 1em; line-height: 1.4em;

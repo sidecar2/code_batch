@@ -83,7 +83,6 @@ $(document).ready(function(){
     $('.more_about.close').click(function(){
         $(this).slideToggle("slow");
     });
-    $("section#recent_posts .content_wrap > div:nth-child(4n)").addClass('last');
 });
 
 

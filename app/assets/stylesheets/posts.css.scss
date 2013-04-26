@@ -175,4 +175,5 @@ p.join.preview {text-align: left;
   margin-left: 0;
 }
 
-body.posts .status a, .status, .links a, a {color: #F5F4F1;}
+body.posts .status a, .status, .links a, a,  {color: #F5F4F1;}
+body.devise .status a, .status, .links a, a { color: #808285; font-weight: 600;text-transform: uppercase; }

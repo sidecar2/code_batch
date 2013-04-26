@@ -157,3 +157,7 @@ p.more_about {font-size: 1.8em; margin: 40px 0; text-align: center; color: #7D7D
    &:hover { background: #EE7B46; @include transition(background, .8s); text-decoration: none; }
 }
 }
+
+.snippet_wrap.home:nth-child(3n+3) {
+  margin-right: 0;
+}
