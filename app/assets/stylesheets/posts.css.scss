@@ -121,8 +121,9 @@ p.post_heading.active { @include gradient(hsl(240, 1%, 97%), hsl(208, 3%, 91%), 
 .post_content .ace_editor.ace-solarized-light .ace_scroller, .post_entry.code .ace_editor.ace-solarized-light .ace_scroller, .post_content .ace_editor .ace-tm .ace_scroller, .post_content .ace-tm .ace_scroller {background-color: #494F57;} 
 .post_content .ace_editor.ace-solarized-light .ace_marker-layer .ace_active-line, .post_entry.code .ace_editor.ace-solarized-light .ace_marker-layer .ace_active-line {background: none; border-bottom: dotted 1px #ddd;}
 
-.post_content .ace-solarized-dark .ace_gutter {background: #fff;}
+.post_content .ace-solarized-dark .ace_gutter {background: #fff; color: $lightgray;}
 .post_content .ace-solarized-dark .ace_gutter-active-line {background: $lightblue;}
+
 .description_content {background: #F7F8F9; width: 250px; padding: 3px; color: #ADB8BF; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;}
 //SHOW FORM
 .display_form {width: 739px; padding-top: 20px;}
