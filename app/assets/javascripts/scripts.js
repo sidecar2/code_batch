@@ -33,7 +33,7 @@ setTimeout(function() {
 }, 2000); 
 
 
-// <
+// slide out ace editor on click
 $(document).ready(function(){
     $('p.post_heading').click(function(){
         $(this).prev('.ace_editor').slideToggle("slow");
@@ -42,9 +42,8 @@ $(document).ready(function(){
     $('.post_entry.code .ace_editor').click(function(){
         $(this).slideToggle("slow");
     });
-});
 
-$(document).ready(function(){
+//same
     $('.post_heading').click(function(){
         $(this).prev('.selection').slideToggle("slow");
     });
@@ -52,9 +51,9 @@ $(document).ready(function(){
     $('.selection').click(function(){
         $(this).slideToggle("slow");
     });
-});
 
-$(document).ready(function(){
+
+    //change class of paragraph
     $(".toggler").click(function(e){
         e.preventDefault();
  
@@ -62,9 +61,9 @@ $(document).ready(function(){
         $(this).toggleClass("active");
         return false;
     });
-});
 
-$(document).ready(function(){
+
+//slide out
     $('.post_heading').click(function(){
         $(this).next('.post_entry.code').slideToggle("slow");
         $(this).toggleClass('active');
@@ -72,10 +71,9 @@ $(document).ready(function(){
     $('.post_heading.close').click(function(){
         $(this).slideToggle("slow");
     });
-});
 
 
-$(document).ready(function(){
+// more about //home page
     $('.more_about').click(function(){
         $(this).next('section#about').slideToggle("slow");
         $(this).toggleClass('open');
@@ -83,15 +81,15 @@ $(document).ready(function(){
     $('.more_about.close').click(function(){
         $(this).slideToggle("slow");
     });
-});
 
 
 
 
-$(document).ready(function(){
+
+    //force ace editor height
    $(".ace_editor .ace-solarized-light .ace_nobold").css({ 'height': "400px" });
-   });
 
+//add heading above show pages
 $(document).ready(function(){
 $('<p class="post_heading long"> CSS </p>', { id: 'holdy' }).prependTo('.post_content.css');
 $('<p class="post_heading long"> HTML </p>', { id: 'holdy' }).prependTo('.post_content.html');
@@ -102,13 +100,12 @@ $('<p class="post_heading long"> RUBY </p>', { id: 'holdy' }).prependTo('.post_c
  });
 
 
-$(document).ready(function(){
+//show search icon on click
 
     $(".search input#search").click(function(){
  $('.search input[type="image"]').addClass("working").fadeIn(300);
 
       });
-});
 
 
 $('.search input#search').on('blur', function(){
@@ -117,7 +114,7 @@ $('.search input#search').on('blur', function(){
   $(this).next('input').removeClass('input-desc').addClass('input-desc-hover');
 });
 
-
+});
 
 
 $(function(){
