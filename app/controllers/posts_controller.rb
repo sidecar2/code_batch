@@ -11,7 +11,8 @@ def index
 
     @posts = Post.tagged_with(params[:tag])
   else
-     @posts = Post.last(20)
+     @posts = Post.order('created_at DESC').limit(10)
+
   end
 end
 
