@@ -12,12 +12,13 @@
   <div class="description_content">
   <%= @post.tag_list %>
 </div>
-
+<%if @post.notes.empty? %>
+<% else %>
 <h3 class="description_label"> Notes </h3>
   <div class="description_content">
   <%= @post.notes %>
 </div>
-
+<% end %>
 </div>
 </section>
 

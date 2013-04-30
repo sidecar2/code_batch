@@ -9,7 +9,7 @@ layout "static_layout"
 
     @posts = Post.tagged_with(params[:tag])
 	else
-  	 @posts = Post.last(3)
+ @posts = Post.order('created_at DESC').limit(3)
   end
 end
 

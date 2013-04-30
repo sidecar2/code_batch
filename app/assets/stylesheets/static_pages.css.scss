@@ -72,7 +72,11 @@ section#one .column_sample.left p { background: #F7F8F9; }
 .column_sample.right h5, .column_sample.left h5 {text-transform: uppercase; color: $darkgray; text-shadow: 1px 1px 0 #EAEAE5; font-size: 1.2em; border-bottom: 1px solid #EAEAE5; font-weight: 400; font-family: $proxima; margin-bottom: 1em; margin-top: .5em; padding-bottom: 4px;}
 .column_sample.right h5 {padding-left: 40px;}
 article.sample_post {margin: 10px auto 10px auto; margin-left: 30px;  border-radius: 4px; position: relative; @include box-shadow($shadows);}
+section#three article.sample_post {margin: 10px auto 10px auto; margin-left: 30px;  border-radius: 4px; position: relative; @include box-shadow($shadows); float: left; width: 100px; }
+
 article.sample_post p { padding: 6px; font-size: .8em; margin-bottom: 0; line-height: 1.4em; width: 230px; font-family: $brandon; color: $label_blue;}
+section#three article.sample_post p { width: 90px; line-height: 1.15em;}
+
 nav.slide_thumbs { width: 137px; margin: 0 auto; padding-bottom: 8px;
 ul { list-style: none; 
 	li { display: inline-block; width: 15px; height: 15px; margin: 0 5px;
@@ -81,12 +85,26 @@ ul { list-style: none;
 }
 
 article.sample_post .ingredients { border-top: solid 1px #EAEAE5; }
-article.sample_post .heading { color: $label_blue; text-transform: uppercase; float: left; width: 15%; border-right: 1px solid #EAEAE5; padding: 2px; text-indent: 5px; font-size: .7em; font-weight: 600; letter-spacing: 1px; }
-article.sample_post .tag_list {float: left; color: $label_blue; padding-left: 5px; padding-top: 1px; padding-bottom: 1px; width: 75%; font-size: .75em; font-family: $code;}
+article.sample_post .heading { color: $label_blue; text-transform: uppercase; width: 15%; border-right: 1px solid #ddd; padding: 0 2px; text-indent: 5px; font-size: .7em; font-weight: 600; letter-spacing: 1px; float: left;  }
+section#three article.sample_post .heading {width: 90%; border-right: none; line-height: 1em; padding: 1px 0; float: none;}
+article.sample_post .tag_list { color: $label_blue; padding-left: 5px; padding-top: 1px; padding-bottom: 3px; width: 80%; float: left; font-size: .65em;  font-family: $code; line-height: .8em;}
+section#three article.sample_post .tag_list {float: none; width: 90%; padding: 5px;}
 nav.slide_thumbs ul li a {display: inline-block; width: 15px; height: 15px; background: $mediumgray; border-radius: 15px; }
 nav.slide_thumbs ul li a.active {background: $greenbutton;}
+
+ section#three article.sample_post p.avatar {background: #ddd; width: 10px; height: 10px; padding: 0; margin: 0 0 0 4px; @include border-radius(5px);}
+ section#three article.sample_post p.username { width: 80px; height: 15px; padding: 0; margin: 0; text-indent: 10px; font-size: .7em;}
+
+section#three article.sample_post p.avatar.grey {background: $mediumgray; }
+section#three article.sample_post p.avatar.darkgrey {background: $label_blue; }
+section#three article.sample_post p.avatar.orange {background: $darkgray; }
+
+.sample_post .user_wrap {padding: 3px 0;}
 section.slide {position: absolute;}
 
+
+
+.sample_page_column {float: left; width: 120px; height: 280px;}
 //Slide 2 Post Code
 
 .column_sample p.post_heading {width: 120px; margin-bottom: 10px; padding: 1px; font-size: .75em;}
