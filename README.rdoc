@@ -6,6 +6,8 @@ To Do:
 
 2. Find a decent, full-text search add-on for Postgres that isn't Websolr and won't cost me $20 a month.
 
-3. Create individual feeds based on following users $ tags.
+3. Create individual feeds based on following users & tags.
 
 4. Create functionality for private posts.
+
+5. Install masonry for better looking grid view of posts
